@@ -1,0 +1,19 @@
+{
+  "name": "raffy-qa-challenge",
+  "version": "1.0.0",
+  "description": "this is Raffy Rodriguez's  Senior QA challenge for GBH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "automation",
+    "GBH"
+  ],
+  "author": "Raffy Rodriguez.",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.0.0"
+  }
+}
