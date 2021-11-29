@@ -1,7 +1,9 @@
 import SignInPage  from './pageObjets/signInPage';
+import MainPage from './pageObjets/mainPage';
 
 
-const signIn = new SignInPage();
+const SIGNIN = new SignInPage();
+const MAIN_PAGE = new MainPage();
 
 
 
@@ -10,22 +12,22 @@ Cypress.Commands.add('login', (email, password)=>{
    cy.fixture('loginData').then(function(data){ this.data = data}).then(function(){
           cy.visit('/');
 
-          signIn.signInButton().click();
-          signIn.emailField().type(this.data.email);
-          signIn.passField().type(this.data.pass);
-          signIn.submitButton().click();
+          SIGNIN.signInButton().click();
+          SIGNIN.emailField().type(this.data.email);
+          SIGNIN.passField().type(this.data.pass);
+          SIGNIN.submitButton().click();
           cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
           
       });
   
    
-})
+});
 
 Cypress.Commands.add('signOut', ()=>{
    cy.get('.logout').click();
    
-})
+});
 
 Cypress.Commands.add('goToHome', ()=> {
-   cy.get('li > .btn > span').click();
-})
+   MAIN_PAGE.homeButton().click();
+});

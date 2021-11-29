@@ -1,6 +1,6 @@
 import MainPage from "../../support/pageObjets/mainPage";
 
-const main = new MainPage();
+const MAIN_PAGE = new MainPage();
 
 describe('Dashboard page testing', function(){
 
@@ -12,20 +12,20 @@ describe('Dashboard page testing', function(){
     });
 
     it('Best Seller section', function(){
-       main.bestSellers().click();
-       main.activeBestSeller().should('be.visible');
+       MAIN_PAGE.bestSellers().click();
+       MAIN_PAGE.activeBestSeller().should('be.visible');
        cy.signOut();
-       main.mainMenu().should('be.visible');
+       MAIN_PAGE.mainMenu().should('be.visible');
 
     });
 
-    it.only('Search an item with search bar', function(){
+    it('Search an item with search bar', function(){
       
-     main.searchBar().type(this.data.item);
-     main.searchButton().click();   
-     main.itemTitle(this.data.item).should('be.visible');         
+     MAIN_PAGE.searchBar().type(this.data.item);
+     MAIN_PAGE.searchButton().click();   
+     MAIN_PAGE.itemTitle(this.data.item).should('be.visible');         
         
-    })
+    });
 
 
    

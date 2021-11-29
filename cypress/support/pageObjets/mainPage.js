@@ -5,6 +5,10 @@ class MainPage{
             return cy.get('.sf-menu');
         }
 
+        homeButton(){
+            return cy.get('li > .btn > span');
+        }
+
         searchBar(){
             return cy.get('#search_query_top');
         }
