@@ -6,7 +6,8 @@ const SIGN = new SignInPage();
 describe('TC001 Login', function(){
 
        it('login case', function(){         
-        cy.login();       
+        cy.login();
+        cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');       
     });
 
 

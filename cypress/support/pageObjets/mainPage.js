@@ -28,6 +28,26 @@ class MainPage{
         itemTitle(item){
             return cy.get('div[class="product-container"] h5 a[title= "'+ item +'"]')
         }
+        
+        wishItem(){
+                return cy.get('.product_img_link > .replace-2x');
+        }
+
+        wishItemMore(){
+            return cy.get('.lnk_view > span');
+        }
+
+        wishListButton(){
+            return cy.get('#wishlist_button');
+        }
+
+        wishAddedMsg(){
+            return cy.get('.fancybox-error');
+        }
+
+        wishAddedMsgClose(){
+            return cy.get('.fancybox-item');
+        }
 
         newsBar(){
             return cy.get('#newsletter-input');

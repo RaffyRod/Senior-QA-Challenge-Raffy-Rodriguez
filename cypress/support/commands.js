@@ -11,12 +11,11 @@ Cypress.Commands.add('login', (email, password)=>{
    
    cy.fixture('loginData').then(function(data){ this.data = data}).then(function(){
           cy.visit('/');
-
           SIGNIN.signInButton().click();
           SIGNIN.emailField().type(this.data.email);
           SIGNIN.passField().type(this.data.pass);
           SIGNIN.submitButton().click();
-          cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
+         //  cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
           
       });
   

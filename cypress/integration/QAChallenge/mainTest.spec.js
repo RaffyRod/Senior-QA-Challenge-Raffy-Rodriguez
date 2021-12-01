@@ -6,6 +6,7 @@ describe('Dashboard page testing', function(){
 
     beforeEach(function(){
         cy.login();
+        cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
         cy.goToHome();
         cy.fixture('items').then(function(data){ this.data = data});
 
@@ -19,12 +20,29 @@ describe('Dashboard page testing', function(){
 
     });
 
-    it('Search an item with search bar', function(){
+    it('Search for an using the search bar', function(){
       
      MAIN_PAGE.searchBar().type(this.data.item);
      MAIN_PAGE.searchButton().click();   
      MAIN_PAGE.itemTitle(this.data.item).should('be.visible');         
         
+    });
+
+    it('Adding to the wish list', function(){
+        MAIN_PAGE.searchBar().type(this.data.item);
+        MAIN_PAGE.searchButton().click();   
+        MAIN_PAGE.wishItem().trigger('mouseover');
+        MAIN_PAGE.wishItemMore().click();
+        MAIN_PAGE.wishListButton().click(); 
+        MAIN_PAGE.wishAddedMsg().should('have.text', 'Added to your wishlist.');
+        MAIN_PAGE.wishAddedMsgClose().click();
+        cy.signOut();    
+    });
+
+    it.only('Subscribe to NewsLetter', function(){
+        MAIN_PAGE.newsBar().type('somemailforall338@mail.com');
+        MAIN_PAGE.newsButton().click();
+        MAIN_PAGE.newsAlert().should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');
     });
 
 
