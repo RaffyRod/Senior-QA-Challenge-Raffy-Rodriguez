@@ -1,6 +1,9 @@
 import MainPage from "../../support/pageObjets/mainPage";
 
+
 const MAIN_PAGE = new MainPage();
+const FAKER =  require('faker');
+const  RANDOM_EMAIL = FAKER.internet.email();
 
 describe('Dashboard page testing', function(){
 
@@ -40,7 +43,7 @@ describe('Dashboard page testing', function(){
     });
 
     it.only('Subscribe to NewsLetter', function(){
-        MAIN_PAGE.newsBar().type('somemailforall338@mail.com');
+        MAIN_PAGE.newsBar().type(RANDOM_EMAIL);
         MAIN_PAGE.newsButton().click();
         MAIN_PAGE.newsAlert().should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');
     });
