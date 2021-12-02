@@ -1,7 +1,9 @@
 import MainPage from "../../support/pageObjets/mainPage";
+import CheckOutPage from "../../support/pageObjets/checkOutPage";
 
 
 const MAIN_PAGE = new MainPage();
+const CHECK = new CheckOutPage();
 const FAKER =  require('faker');
 const  RANDOM_EMAIL = FAKER.internet.email();
 
@@ -42,10 +44,27 @@ describe('Dashboard page testing', function(){
         cy.signOut();    
     });
 
-    it.only('Subscribe to NewsLetter', function(){
+    it('Subscribe to NewsLetter', function(){
         MAIN_PAGE.newsBar().type(RANDOM_EMAIL);
         MAIN_PAGE.newsButton().click();
         MAIN_PAGE.newsAlert().should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');
+    });
+
+    it('Add to shopping Cart', function(){
+        cy.addToShoppingCart(this.data.item);
+        CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
+        CHECK.cartQuantity().should('have.text', this.data.quantity);
+        CHECK.cartColor().should('include.text', this.data.color);
+        CHECK.cartItemName().should('have.text', this.data.item);
+        CHECK.cartTotal().should('have.text', this.data.price);
+    });
+
+    it.only('Remove from shopping cart', function(){
+        cy.addToShoppingCart(this.data.item);
+        CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
+        CHECK.goToCheckOut().click();
+        CHECK.deleteFromCheckOut().click();
+        CHECK.checkOutAlert().should('have.text', 'Your shopping cart is empty.')
     });
 
 

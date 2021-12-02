@@ -1,4 +1,8 @@
 {
-    "item": "Blouse"   
+    "item": "Blouse",
+    "size": "s",
+    "color": "Black",
+    "quantity": 1,
+    "price": "$27.00"   
     
 }

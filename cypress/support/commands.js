@@ -1,9 +1,11 @@
 import SignInPage  from './pageObjets/signInPage';
 import MainPage from './pageObjets/mainPage';
+import CheckOutPage from './pageObjets/checkOutPage';
 
 
 const SIGNIN = new SignInPage();
 const MAIN_PAGE = new MainPage();
+const CHECK = new CheckOutPage();
 
 
 
@@ -29,4 +31,10 @@ Cypress.Commands.add('signOut', ()=>{
 
 Cypress.Commands.add('goToHome', ()=> {
    MAIN_PAGE.homeButton().click();
+});
+
+Cypress.Commands.add('addToShoppingCart', (item)=>{
+   MAIN_PAGE.searchBar().type(item);
+   MAIN_PAGE.searchButton().click();  
+   CHECK.addToCartSectionButton().click();
 });

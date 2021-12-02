@@ -17,6 +17,7 @@ class MainPage{
             return cy.get('#searchbox > .btn');
         }
 
+       
         bestSellers(){
             return cy.get('#home-page-tabs > :nth-child(2) > .blockbestsellers');
         }
@@ -61,13 +62,13 @@ class MainPage{
             return cy.get('.alert');
         }
 
-        viewCart(){
-            cy.get('[title="View my shopping cart"]');
-        }
+        // viewCart(){
+        //     cy.get('[title="View my shopping cart"]');
+        // }
 
-        removeFromCart(){
-            return cy.get('.remove_link');
-        }
+        // removeFromCart(){
+        //     return cy.get('.remove_link');
+        // }
 
 
 }
