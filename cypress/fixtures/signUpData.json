@@ -6,11 +6,11 @@
     "monthOfBirth":"March",
     "yearOfBirth":"1991",
     "address":"123 Fake RD",
-    "city":"Los Angeles",
-    "postalCode":"90210",
-    "country":"United States",
-    "state":"California",
-    "mobilePhone":"18005552525",
-    "alias":"TestHouse"
+    "addressCity":"Los Angeles",
+    "addressZipCode":"90210",
+    "addressCountry":"United States",
+    "addressState":"California",
+    "addressMobilePhone":"18005552525",
+    "addressAlias":"TestHouse"
   }
   
