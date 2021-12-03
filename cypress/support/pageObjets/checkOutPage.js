@@ -1,5 +1,5 @@
 class CheckOutPage{
-
+    
     addToCartSectionButton(){
         return cy.get('.ajax_add_to_cart_button > span');
     }
