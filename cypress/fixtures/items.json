@@ -3,6 +3,7 @@
     "size": "s",
     "color": "Black",
     "quantity": 1,
-    "price": "$27.00"   
+    "price": "$27.00",
+    "orderFinalPrice": "$29.00"   
     
 }

@@ -37,6 +37,33 @@ class CheckOutPage{
         return cy.get('.alert');
     }
 
+    //checkout bying process
+
+    checkoutButton(){
+        return cy.get('.cart_navigation > .button > span');
+    }
+
+   
+    termsOfService(){
+        return cy.get('#cgv');
+    }
+
+    payWithBankWire(){
+        return cy.get('.bankwire');
+    }
+
+    paymentName(){
+        return cy.get('.page-subheading');
+    }
+
+   
+    orderConfirmation(){
+        return cy.get('.cheque-indent > .dark');
+    }
+
+    finalPrice(){
+        return cy.get('.price > strong');
+    }
 
 }
 export default CheckOutPage;
