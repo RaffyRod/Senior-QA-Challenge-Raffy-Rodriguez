@@ -1,12 +1,6 @@
 import SignUpPage  from "../../support/pageObjets/signUpPage";
 import getUser  from "../../support/utilities/helpers";
 
-// const FAKER =  require('faker');
-// const  RANDOM_EMAIL = FAKER.internet.email();
-
-// let user = {};
-
-
 const SIGNUP = new SignUpPage();
 const  USER = getUser();
 
@@ -36,15 +30,23 @@ describe('Sign Up test case',function(){
                 SIGNUP.addressFirstLine().type(USER.address);
                 SIGNUP.addressSecondLine().type(USER.secondaryAddress);
                 SIGNUP.addressCity().type(USER.city);
-                SIGNUP.addressState().select(USER.state, { force: true });  // revisar este issue             
+
+                
+               // SIGNUP.addressState().select(USER.state);  // revisar este issue 
+                
+                
                 SIGNUP.addressZipcode().type(USER.zipCode);
                 SIGNUP.addressCountry().select(USER.country);
                 SIGNUP.addressMoreInfo().type(USER.moreInfo);
                 SIGNUP.addressHomePhone().type(USER.homePhone);
                 SIGNUP.addressMobilePhone().type(USER.mobilePhone);
                 SIGNUP.addressAlias().type(USER.addressAlias);
-                cy.wait(10000)
+
+                //the state field needs to be filled out last due to some issues with the website
+                SIGNUP.addressState().select(USER.state);                
                 SIGNUP.addressRegisterButton().click();
+                cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
+                SIGNUP.infoAccount().should('have.text', 'Welcome to your account. Here you can manage all of your personal information and orders.');
 
 
 

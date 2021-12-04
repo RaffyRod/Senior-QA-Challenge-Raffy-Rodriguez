@@ -110,6 +110,10 @@ class SignUpPage{
         return cy.get('#submitAccount > span');
     }
 
+    infoAccount(){
+        return cy.get('.info-account');
+    }
+
 
 
 
