@@ -1,5 +1,9 @@
 class MainPage{
 
+        logOut(){
+            return cy.get('.logout');
+        }
+
 
         mainMenu(){
             return cy.get('.sf-menu');

@@ -25,7 +25,11 @@ class SignUpPage{
     }
 
     lastName(){
-        return cy.get('#lastname');
+        return cy.get('#customer_lastname');
+    }
+
+    userPassword(){
+        return cy.get('#passwd');
     }
 
     dayOfBirth(){

@@ -1,11 +1,11 @@
 import MainPage from "../../support/pageObjets/mainPage";
 import CheckOutPage from "../../support/pageObjets/checkOutPage";
+import getUser  from "../../support/utilities/helpers";
 
 
 const MAIN_PAGE = new MainPage();
 const CHECK = new CheckOutPage();
-const FAKER =  require('faker');
-const  RANDOM_EMAIL = FAKER.internet.email();
+const USER = getUser();
 
 describe('Dashboard page testing', function(){
 
@@ -17,11 +17,14 @@ describe('Dashboard page testing', function(){
 
     });
 
+    after(function(){
+        cy.signOut();
+        //MAIN_PAGE.mainMenu().should('be.visible');
+    });
+
     it('Best Seller section', function(){
        MAIN_PAGE.bestSellers().click();
-       MAIN_PAGE.activeBestSeller().should('be.visible');
-       cy.signOut();
-       MAIN_PAGE.mainMenu().should('be.visible');
+       MAIN_PAGE.activeBestSeller().should('be.visible');     
 
     });
 
@@ -41,11 +44,11 @@ describe('Dashboard page testing', function(){
         MAIN_PAGE.wishListButton().click(); 
         MAIN_PAGE.wishAddedMsg().should('have.text', 'Added to your wishlist.');
         MAIN_PAGE.wishAddedMsgClose().click();
-        cy.signOut();    
+        //cy.signOut();    
     });
 
     it('Subscribe to NewsLetter', function(){
-        MAIN_PAGE.newsBar().type(RANDOM_EMAIL);
+        MAIN_PAGE.newsBar().type(USER.email);
         MAIN_PAGE.newsButton().click();
         MAIN_PAGE.newsAlert().should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');
     });

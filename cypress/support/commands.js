@@ -17,15 +17,14 @@ Cypress.Commands.add('login', (email, password)=>{
           SIGNIN.emailField().type(this.data.email);
           SIGNIN.passField().type(this.data.pass);
           SIGNIN.submitButton().click();
-         //  cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
-          
+                   
       });
   
    
 });
 
 Cypress.Commands.add('signOut', ()=>{
-   cy.get('.logout').click();
+   MAIN_PAGE.logOut().dblclick();
    
 });
 

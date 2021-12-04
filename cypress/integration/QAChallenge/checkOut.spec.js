@@ -13,6 +13,8 @@ describe('CheckOut Screen Test case', function(){
     });
 
     it('CheckOutItem', function(){
+
+        //Adding Item to shopping Cart
         cy.addToShoppingCart(this.data.item);
         CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
         CHECK.cartQuantity().should('have.text', this.data.quantity);
@@ -31,7 +33,6 @@ describe('CheckOut Screen Test case', function(){
         CHECK.checkoutButton().click();
         CHECK.orderConfirmation().should('have.text', 'Your order on My Store is complete.');
         CHECK.finalPrice().should('have.text', '$29.00');
-
         cy.signOut();
     });
 
