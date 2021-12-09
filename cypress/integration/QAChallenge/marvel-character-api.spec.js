@@ -5,7 +5,7 @@ const API = new getApi();
 describe('Marvel character test cases', function(){
     
     beforeEach(()=>{
-        cy.request(`${API.url}/v1/public/characters?nameStartsWith=${API.characterName}&ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
+        cy.request(`${API.url}/v1/public/comics?title=${name}&ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
         .then((response) => {
             expect(response.body).not.to.be.null
             let id = response.body.data.results[10].id
