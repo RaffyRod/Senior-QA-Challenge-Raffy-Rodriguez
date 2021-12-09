@@ -9,7 +9,7 @@ const CHECK = new CheckOutPage();
 
 
 
-Cypress.Commands.add('login', (email, password)=>{
+Cypress.Commands.add('login', function(email, password){
    
    cy.fixture('loginData').then(function(data){ this.data = data}).then(function(){
           cy.visit('/');
@@ -23,16 +23,16 @@ Cypress.Commands.add('login', (email, password)=>{
    
 });
 
-Cypress.Commands.add('signOut', ()=>{
+Cypress.Commands.add('signOut', function(){
    MAIN_PAGE.logOut().dblclick();
    
 });
 
-Cypress.Commands.add('goToHome', ()=> {
+Cypress.Commands.add('goToHome', function(){
    MAIN_PAGE.homeButton().click();
 });
 
-Cypress.Commands.add('addToShoppingCart', (item)=>{
+Cypress.Commands.add('addToShoppingCart', function(item){
    MAIN_PAGE.searchBar().type(item);
    MAIN_PAGE.searchButton().click();  
    CHECK.addToCartSectionButton().click();

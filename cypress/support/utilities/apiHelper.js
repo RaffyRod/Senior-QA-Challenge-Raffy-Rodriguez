@@ -11,8 +11,9 @@ function getApi(){
     apiData.hash = md5(apiData.timestamp + apiData.privateKey + apiData.publicKey );
     apiData.url = "https://gateway.marvel.com:443";
     apiData.limit = 100;
+    apiData.overLimit = 1;
     apiData.comicTarget = "X-Man";
-    apiData.characterTarget = "Spider-Man";
+    apiData.characterName = "Spider-Man";
    
 
     return apiData;

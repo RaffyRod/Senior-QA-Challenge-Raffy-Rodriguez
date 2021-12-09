@@ -68,8 +68,5 @@ describe('Dashboard page testing', function(){
         CHECK.goToCheckOut().click();
         CHECK.deleteFromCheckOut().click();
         CHECK.checkOutAlert().should('have.text', 'Your shopping cart is empty.')
-    });
-
-
-   
+    });   
 });

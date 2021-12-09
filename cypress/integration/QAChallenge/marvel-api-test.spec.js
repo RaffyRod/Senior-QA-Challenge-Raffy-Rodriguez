@@ -2,8 +2,8 @@ import getApi from "../../support/utilities/apiHelper";
 
 const API = new getApi();
 
-describe('Marvel characters', () => {
-    it('Get all Marvel characters', () => {     
+describe('Marvel characters', function(){
+    it('Get all Marvel characters', function(){     
 
         cy.request(`${API.url}/v1/public/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
         .then((response) => {
@@ -15,7 +15,7 @@ describe('Marvel characters', () => {
 
     //Invalid scenarios
 
-    it('Get More than 100 Marvel characters', () => {
+    it('Get More than 100 Marvel characters', function(){
        
         cy.request({
             method: 'GET',
@@ -29,7 +29,7 @@ describe('Marvel characters', () => {
     });
 
 
-    it('Missing timestamp, unable to authenticate', () => {
+    it('Missing timestamp, unable to authenticate', function(){
        
         cy.request({
             method: 'GET',
