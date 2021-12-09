@@ -8,15 +8,15 @@ describe('Marvel X-man Comic character Test', function(){
         cy.request(`${API.url}/v1/public/comics?title=${API.comicSerie}&ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
         .then((response) => {
             expect(response.body).not.to.be.null
-            let id = response.body.data.results[57].id
+            var id = response.body.data.results[57].id   // id was declared using var to take advantage of hoisting
             cy.wrap(id).as('id');
         });
 
     });
 
     it('Get X-man Series Characters', function(){
-        const comicID = this.id;
-        cy.request(`${API.url}/v1/public/comics/${comicID}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
+        
+        cy.request(`${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
         .then((response) => {
             expect(response.body).not.to.be.null
             expect(response).to.have.property('duration');
@@ -29,10 +29,10 @@ describe('Marvel X-man Comic character Test', function(){
     //Invalid scenarios
 
     it('Missing hash, unable to authenticate', function(){
-        const comicID = this.id;
+        
         cy.request({
             method: 'GET',
-            url:`${API.url}/v1/public/comics/${comicID}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&limit=${API.limit}`, 
+            url:`${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&limit=${API.limit}`, 
             failOnStatusCode: false       
        
         }).then((response) => {            
@@ -41,12 +41,11 @@ describe('Marvel X-man Comic character Test', function(){
     });
 });
 
-    it.only('Attempting to get more than 100 X-Man', function(){
-        const comicID = this.id;
-
+    it('Attempting to get more than 100 X-Man', function(){
+        
         cy.request({
             method: 'GET',
-            url: `${API.url}/v1/public/comics/${comicID}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit + 1}`, 
+            url: `${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit + 1}`, 
             failOnStatusCode: false 
         }).then((response) => {
             expect(response.body).to.have.property('code', 409);
