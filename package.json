@@ -4,7 +4,8 @@
   "description": "this is Raffy Rodriguez's  Senior QA challenge for GBH",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
   },
   "keywords": [
     "testing",
@@ -14,10 +15,13 @@
   "author": "Raffy Rodriguez.",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.0.0"
+    "cypress": "^9.1.1",
+    "mochawesome-merge": "^4.2.1"
   },
   "dependencies": {
     "faker": "^5.5.3",
-    "md5": "^2.3.0"
+    "md5": "^2.3.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^7.0.1"
   }
 }

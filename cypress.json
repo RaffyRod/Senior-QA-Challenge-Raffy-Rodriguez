@@ -2,5 +2,19 @@
     "baseUrl": "http://automationpractice.com/index.php",
     "defaultCommandTimeout" : 40000,
     "viewportHeight": 768,
-    "viewportWidth": 1024
+    "viewportWidth": 1024,
+    "reporter": "mochawesome",
+    "reporterOptions":{
+        "reporterEnabled": "mochawesome",
+        "reportDir": "cypress/reports",
+        "reportTitle": "Senior QA Challenge: Raffy Rodriguez's Test's results",
+        "reportFilename" : "report",
+        "quiet": true,
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mm/dd/yyyy HH:mm"
+    },
+    "video": false
 }

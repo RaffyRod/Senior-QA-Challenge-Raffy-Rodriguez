@@ -14,7 +14,7 @@ describe('Marvel X-man Comic character Test', function(){
 
     });
 
-    it('Get X-man Series Characters', function(){
+    it('Get X-man Serie Characters', function(){
         
         cy.request(`${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)
         .then((response) => {
