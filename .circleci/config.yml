@@ -16,19 +16,19 @@ jobs:
      
       - run:
           name: Run cypress pretests
-          command: npm pretest
+          command: npm run pretest
 
       - run:
           name: Run cypress tests
-          command: npm scripts
+          command: npm run scripts
 
       - run:
           name: Run combine reports
-          command: npm combine-reports
+          command: npm run combine-reports
 
       - run:
           name: Run generate reports
-          command: npm generate-report
+          command: npm run generate-report
      
       - store_artifacts:
           name: Uploading cypress/videos artifacts
