@@ -1,5 +1,4 @@
 # dependencies
 /node_modules
-/mochawesome-report
 /cypress/videos
 /cypress/screenshots

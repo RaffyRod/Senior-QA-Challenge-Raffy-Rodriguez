@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-11T04:47:25.181Z",
+    "end": "2021-12-11T04:49:12.111Z",
+    "duration": 106930,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2dfc78f1-3324-4c84-8f35-48f84055c0e4",
+      "title": "",
+      "fullFile": "cypress/integration/QAChallenge/TS_004 checkOut.spec.js",
+      "file": "cypress/integration/QAChallenge/TS_004 checkOut.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c0fc731-b12a-4b77-8fb2-81117a81371a",
+          "title": "Checkout Test case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Checkout Item",
+              "fullTitle": "Checkout Test case Checkout Item",
+              "timedOut": null,
+              "duration": 106909,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Adding Item to shopping Cart\ncy.addToShoppingCart(this.data.item);\nCHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');\nCHECK.cartQuantity().should('have.text', this.data.quantity);\nCHECK.cartColor().should('include.text', this.data.color);\nCHECK.cartItemName().should('have.text', this.data.item);\nCHECK.cartTotal().should('have.text', this.data.price);\nCHECK.goToCheckOut().click(); //checkOut Process\nCHECK.checkoutButton().click();\nCHECK.checkoutButton().click();\nCHECK.termsOfService().check().should('be.checked');\nCHECK.checkoutButton().click();\nCHECK.payWithBankWire().click();\nCHECK.paymentName().should('include.text', 'Bank-wire payment.');\nCHECK.checkoutButton().click();\nCHECK.orderConfirmation().should('have.text', 'Your order on My Store is complete.');\nCHECK.finalPrice().should('have.text', '$29.00');\ncy.signOut();",
+              "err": {},
+              "uuid": "f78d682d-1e49-4f55-83d1-4a035e62bede",
+              "parentUUID": "5c0fc731-b12a-4b77-8fb2-81117a81371a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f78d682d-1e49-4f55-83d1-4a035e62bede"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 106909,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportDir": "cypress/reports/mocha",
+        "reportTitle": "Senior QA Challenge: Raffy Rodriguez's Test's results",
+        "reportFilename": "report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm/dd/yyyy HH:MM"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
