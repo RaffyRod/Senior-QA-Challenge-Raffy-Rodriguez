@@ -2,7 +2,7 @@ import getApi from "../../support/utilities/apiHelper";
 
 const API = new getApi();
 
-describe('Marvel character test cases', function(){
+describe('Marvel Character test cases', function(){
     
     beforeEach(()=>{
         cy.request(`${API.url}/v1/public/comics?title=${API.characterName}&ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)

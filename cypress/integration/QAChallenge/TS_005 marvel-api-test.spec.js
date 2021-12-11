@@ -2,7 +2,7 @@ import getApi from "../../support/utilities/apiHelper";
 
 const API = new getApi();
 
-describe('Marvel characters', function(){
+describe('All Marvel Characters test', function(){
     it('Get all Marvel characters', function(){     
 
         cy.request(`${API.url}/v1/public/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`)

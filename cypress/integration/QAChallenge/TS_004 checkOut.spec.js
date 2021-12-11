@@ -2,7 +2,7 @@ import CheckOutPage from "../../support/pageObjets/checkOutPage";
 
 const CHECK = new CheckOutPage();
 
-describe('CheckOut Screen Test case', function(){
+describe('Checkout Test case', function(){
 
     beforeEach(function(){
         cy.login();
@@ -12,7 +12,7 @@ describe('CheckOut Screen Test case', function(){
 
     });
 
-    it('CheckOutItem', function(){
+    it('Checkout Item', function(){
 
         //Adding Item to shopping Cart
         cy.addToShoppingCart(this.data.item);

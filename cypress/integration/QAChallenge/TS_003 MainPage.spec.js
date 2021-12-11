@@ -7,7 +7,7 @@ const MAIN_PAGE = new MainPage();
 const CHECK = new CheckOutPage();
 const USER = getUser();
 
-describe('Dashboard page testing', function(){
+describe('Main Page test cases', function(){
 
     beforeEach(function(){
         cy.login();
@@ -62,7 +62,7 @@ describe('Dashboard page testing', function(){
         CHECK.cartTotal().should('have.text', this.data.price);
     });
 
-    it.only('Remove from shopping cart', function(){
+    it('Remove from shopping cart', function(){
         cy.addToShoppingCart(this.data.item);
         CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
         CHECK.goToCheckOut().click();

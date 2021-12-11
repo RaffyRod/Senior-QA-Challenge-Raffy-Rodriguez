@@ -5,7 +5,7 @@ const SIGNUP = new SignUpPage();
 const  USER = getUser();
 
 
-describe('Sign Up test case',function(){
+describe('SignUp',function(){
 
         beforeEach(function(){
             cy.visit('/');

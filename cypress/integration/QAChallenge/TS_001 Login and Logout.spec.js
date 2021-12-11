@@ -3,7 +3,7 @@ import SignInPage from '../../support/pageObjets/signInPage';
 const SIGN = new SignInPage();
 
 /// <reference types="Cypress"/>
-describe('TC001 Login', function(){
+describe('Login and Logout', function(){
 
        it('login case', function(){         
         cy.login();
