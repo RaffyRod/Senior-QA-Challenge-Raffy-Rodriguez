@@ -28,4 +28,4 @@ jobs:
 
       - store_artifacts:
           name: Uploading report artifacts
-          path: reports
+          path: cypress/reports/finalReports
