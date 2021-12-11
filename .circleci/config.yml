@@ -15,8 +15,20 @@ jobs:
           when: always
      
       - run:
+          name: Run cypress pretests
+          command: npm pretest
+
+      - run:
           name: Run cypress tests
-          command: npm test
+          command: npm scripts
+
+      - run:
+          name: Run combine reports
+          command: npm combine-reports
+
+      - run:
+          name: Run generate reports
+          command: npm generate-report
      
       - store_artifacts:
           name: Uploading cypress/videos artifacts
@@ -25,7 +37,7 @@ jobs:
       - store_artifacts:
           name: Uploading cypress/screenshots artifacts
           path: cypress/screenshots
-          
+
       - store_artifacts:
           name: Uploading report artifacts
           path: reports
