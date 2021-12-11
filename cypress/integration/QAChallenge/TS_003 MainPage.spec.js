@@ -48,7 +48,7 @@ describe('Main Page test cases', function(){
 
     it('Subscribe to NewsLetter', function(){
         MAIN_PAGE.newsBar().click();
-        MAIN_PAGE.newsBar().type(USER.email);
+        MAIN_PAGE.newsBar().type(USER.newsEmail);
         cy.wait(5000);
         MAIN_PAGE.newsButton().click();
         MAIN_PAGE.newsAlert().should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');

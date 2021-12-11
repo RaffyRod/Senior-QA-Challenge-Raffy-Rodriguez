@@ -3,7 +3,8 @@ const FAKER =  require('faker');
 function getUser(){   
     
     let user = {};
-    user.email = "someemail@ymail.com";//FAKER.internet.email();
+    user.email = FAKER.internet.email();
+    user.newsEmail = FAKER.internet.email();
     user.name =  FAKER.name.firstName();
     user.lastName = FAKER.name.lastName();
     user.password = FAKER.internet.password();
