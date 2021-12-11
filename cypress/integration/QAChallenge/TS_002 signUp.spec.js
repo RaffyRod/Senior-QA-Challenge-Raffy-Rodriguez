@@ -25,7 +25,7 @@ describe('SignUp',function(){
                 SIGNUP.dayOfBirth().select(USER.dayOfBirth);
                 SIGNUP.monthOfBirth().select(USER.monthOfBirth);
                 SIGNUP.yearOfBirth().select(USER.yearOfBirth);
-                SIGNUP.signForNewsLetter().check();
+                //SIGNUP.signForNewsLetter().check();
                 SIGNUP.receiveSpecialOffers().check();
                 SIGNUP.companyName().type(USER.company);
                 SIGNUP.addressFirstLine().type(USER.address);
