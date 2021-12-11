@@ -4,7 +4,7 @@
   "description": "this is Raffy Rodriguez's  Senior QA challenge for GBH",
   "main": "index.js",
   "scripts": {
-    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\finalReports",
+    "clean:reports": "rm -rf cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\finalReports",
     "pretest": "npm run clean:reports",
     "scripts": "cypress run",
     "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/finalReports/finalReport.json",
