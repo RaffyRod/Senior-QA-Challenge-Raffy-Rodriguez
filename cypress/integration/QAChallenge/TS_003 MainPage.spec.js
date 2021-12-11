@@ -17,10 +17,10 @@ describe('Main Page test cases', function(){
 
     });
 
-    after(function(){
-        cy.signOut();
-        MAIN_PAGE.mainMenu().should('be.visible');
-    });
+    // after(function(){
+    //     cy.signOut();
+    //     MAIN_PAGE.mainMenu().should('be.visible');
+    // });
 
     it('Best Seller section', function(){
        MAIN_PAGE.bestSellers().click();
