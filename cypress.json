@@ -18,5 +18,5 @@
                 "timestamp": "mm/dd/yyyy HH:MM"
     }
     },
-    "video": false
+    "video": true
 }
