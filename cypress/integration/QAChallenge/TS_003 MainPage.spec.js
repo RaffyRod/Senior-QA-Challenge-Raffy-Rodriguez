@@ -19,7 +19,7 @@ describe('Main Page test cases', function(){
 
     after(function(){
         cy.signOut();
-        //MAIN_PAGE.mainMenu().should('be.visible');
+        MAIN_PAGE.mainMenu().should('be.visible');
     });
 
     it('Best Seller section', function(){
@@ -43,8 +43,7 @@ describe('Main Page test cases', function(){
         MAIN_PAGE.wishItemMore().click();
         MAIN_PAGE.wishListButton().click(); 
         MAIN_PAGE.wishAddedMsg().should('have.text', 'Added to your wishlist.');
-        MAIN_PAGE.wishAddedMsgClose().click();
-        //cy.signOut();    
+        MAIN_PAGE.wishAddedMsgClose().click();            
     });
 
     it('Subscribe to NewsLetter', function(){
