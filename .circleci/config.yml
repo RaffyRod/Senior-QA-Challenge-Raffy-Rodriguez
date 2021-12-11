@@ -1,0 +1,37 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest-browsers
+    
+    steps:
+      - checkout
+      
+      - restore_cache:
+          name: Restore `package.json` cache
+          keys:
+            - v3-deps-{{ .Branch }}-{{ checksum "package.json" }}
+            - v3-deps-{{ .Branch }}
+            - v3-deps
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          name: Save cache both npm and Cypress!
+          key: v3-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - ~/.cache  ## cache both yarn and Cypress!
+      - run:
+          name: Run cypress tests
+          command: npm test
+     
+      - store_artifacts:
+          name: Uploading cypress/videos artifacts
+          path: cypress/videos
+      - store_artifacts:
+          name: Uploading cypress/screenshots artifacts
+          path: cypress/screenshots
+      - store_artifacts:
+          name: Uploading report artifacts
+          path: reports
