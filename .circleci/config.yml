@@ -15,7 +15,7 @@ jobs:
           when: always
      
       - run:
-          name: Run cypress tests
+          name: Run cypress tests process
           command: npm run test      
      
       - store_artifacts:
