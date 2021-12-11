@@ -1,6 +1,6 @@
 {
     "baseUrl": "http://automationpractice.com/index.php",
-    "defaultCommandTimeout" : 30000,
+    "defaultCommandTimeout" : 90000,
     "viewportHeight": 768,
     "viewportWidth": 1024,
     "reporter": "cypress-multi-reporters",

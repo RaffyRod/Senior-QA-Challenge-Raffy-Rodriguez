@@ -25,7 +25,7 @@ Cypress.Commands.add('login', function(email, password){
 });
 
 Cypress.Commands.add('signOut', function(){
-   MAIN_PAGE.logOut().dblclick();
+   MAIN_PAGE.logOut().click();
    
 });
 
