@@ -14,6 +14,7 @@ Cypress.Commands.add('login', function(email, password){
    cy.fixture('loginData').then(function(data){ this.data = data}).then(function(){
           cy.visit('/');
           SIGNIN.signInButton().click();
+          SIGNIN.emailField().click();
           SIGNIN.emailField().type(this.data.email);
           SIGNIN.passField().type(this.data.pass);
           SIGNIN.submitButton().click();
