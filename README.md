@@ -61,7 +61,7 @@ For the API testing it was required to be automated 3 request to the Marvel Comi
 
 * Node.js must be installed in order to run the project.
 
-* If you are using `window's powershell or CMD` as terminal, go to the  `package.json`, in scripts section go to the command `clean:reports` and replace `rm -rf` with `rmdir /S /Q` in order to generate reports.
+* If you are using `window's powershell or CMD` as terminal, go to the  `package.json`, in scripts section go to the command `clean:reports` and replace `rm -rf` with `rmdir /S /Q` in order to generate reports `(for locally purposes)`.
 
 * Go to [Marvel's developer website](https://developer.marvel.com) and create an account to get a public and a private API key `(this is required for API testing)`.
 
