@@ -10,16 +10,16 @@ http://automationpractice.com/index.php :
 
 
 
-1. Sign up.
-2. Log in.
-3. Search for an item using the search bar.
-4. Check the best seller's section.
-5. Add an item to the wishlist.
-6. Subscribe for newsLetters.
-7. Add an item to the shopping cart
-8. Remove the item from the shopping cart
-9. Complete the checkout.
-10. Log out.
+  1. Sign up.
+  2. Log in.
+  3. Search for an item using the search bar.
+  4. Check the best seller's section.
+  5. Add an item to the wishlist.
+  6. Subscribe for newsLetters.
+  7. Add an item to the shopping cart
+  8. Remove the item from the shopping cart
+  9. Complete the checkout.
+  10. Log out.
         
 
 The test cases are documented in the test management platform https://www.qatouch.com/. To access the test suite, can reach me at:
@@ -30,11 +30,11 @@ raffy.a.rodriguez@gmail.com
 For the API testing it was required to be automated 3 request to the Marvel Comics API https://developer.marvel.com
 
 
-1. Automate that all the characters can be fetch.
+  1. Automate that all the characters can be fetch.
 
-2. Automate that all the comics for Spiderman can be fetch.
+  2. Automate that all the comics for Spiderman can be fetch.
 
-3. Automate that all characters for the X-Man comic can be fetch
+  3. Automate that all characters for the X-Man comic can be fetch
 
 
 
