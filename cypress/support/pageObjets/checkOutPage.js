@@ -37,7 +37,7 @@ class CheckOutPage{
         return cy.get('.alert');
     }
 
-    //checkout bying process
+    //checkout buying process
 
     checkoutButton(){
         return cy.get('.cart_navigation > .button > span');

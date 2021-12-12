@@ -16,11 +16,7 @@ describe('Main Page test cases', function(){
         cy.fixture('items').then(function(data){ this.data = data});
 
     });
-
-    // after(function(){
-    //     cy.signOut();
-    //     MAIN_PAGE.mainMenu().should('be.visible');
-    // });
+    
 
     it('Best Seller section', function(){
        MAIN_PAGE.bestSellers().click();

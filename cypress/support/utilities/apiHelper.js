@@ -12,8 +12,7 @@ function getApi(){
     apiData.url = "https://gateway.marvel.com:443";
     apiData.limit = 100;    
     apiData.comicSerie = "X-Man";
-    apiData.characterName = "Spider-Man";
-   
+    apiData.characterName = "Spider-Man";   
 
     return apiData;
 }

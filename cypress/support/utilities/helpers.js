@@ -8,7 +8,7 @@ function getUser(){
     user.name =  FAKER.name.firstName();
     user.lastName = FAKER.name.lastName();
     user.password = FAKER.internet.password();
-    user.yearOfBirth = String(Math.floor(Math.random() * (2004 - 1900 + 1)) + 1900);  //funct to return ramdon beetween 1980 and 2000
+    user.yearOfBirth = String(Math.floor(Math.random() * (2004 - 1900 + 1)) + 1900);  //funct to return random beetween 1980 and 2004
     user.dayOfBirth = Math.floor(Math.random() * (30 - 1 + 1)) + 1;
     user.monthOfBirth = FAKER.date.month();
 
@@ -18,7 +18,7 @@ function getUser(){
     user.secondaryAddress = FAKER.address.secondaryAddress();
     user.city = FAKER.address.cityName();
     user.state =  FAKER.address.state();
-    user.zipCode = "91210"; //FAKER.address.zipCode(); 
+    user.zipCode = "91210";
     user.country = "United States";
     user.moreInfo = "This is my address for delivery purposes";
     user.homePhone = FAKER.phone.phoneNumberFormat();

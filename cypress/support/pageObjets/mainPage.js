@@ -64,16 +64,7 @@ class MainPage{
 
         newsAlert(){
             return cy.get('.alert');
-        }
-
-        // viewCart(){
-        //     cy.get('[title="View my shopping cart"]');
-        // }
-
-        // removeFromCart(){
-        //     return cy.get('.remove_link');
-        // }
-
+        }     
 
 }
 
