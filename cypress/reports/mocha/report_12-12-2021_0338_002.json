@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-12T07:38:36.075Z",
+    "end": "2021-12-12T07:38:40.118Z",
+    "duration": 4043,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0733cea-901c-4592-bd28-0209c6467cd6",
+      "title": "",
+      "fullFile": "cypress/integration/QAChallenge/TS_005 marvel-api-test.spec.js",
+      "file": "cypress/integration/QAChallenge/TS_005 marvel-api-test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c17378d9-6a68-4c60-9179-afea34bc3f1c",
+          "title": "All Marvel Characters test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get all Marvel characters",
+              "fullTitle": "All Marvel Characters test Get all Marvel characters",
+              "timedOut": null,
+              "duration": 3675,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(`${API.url}/v1/public/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`).then(response => {\n  expect(response.body).to.have.property('code', 200);\n  expect(response.body).not.to.be.null;\n  expect(response.body.data).to.have.property('limit', 100);\n});",
+              "err": {},
+              "uuid": "3f20761e-1e8d-4b61-928f-ef30efaf8138",
+              "parentUUID": "c17378d9-6a68-4c60-9179-afea34bc3f1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get More than 100 Marvel characters",
+              "fullTitle": "All Marvel Characters test Get More than 100 Marvel characters",
+              "timedOut": null,
+              "duration": 220,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit + 1}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 409);\n  expect(response.body).to.have.property('status', 'You may not request more than 100 items.');\n});",
+              "err": {},
+              "uuid": "c1e282df-8fa9-4ce3-a8e3-b0d8c73a8820",
+              "parentUUID": "c17378d9-6a68-4c60-9179-afea34bc3f1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Missing timestamp, unable to authenticate",
+              "fullTitle": "All Marvel Characters test Missing timestamp, unable to authenticate",
+              "timedOut": null,
+              "duration": 116,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/characters?&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 'MissingParameter');\n  expect(response.body).to.have.property('message', 'You must provide a timestamp.');\n});",
+              "err": {},
+              "uuid": "3b940026-6013-4d8a-846d-ab0334e7731b",
+              "parentUUID": "c17378d9-6a68-4c60-9179-afea34bc3f1c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3f20761e-1e8d-4b61-928f-ef30efaf8138",
+            "c1e282df-8fa9-4ce3-a8e3-b0d8c73a8820",
+            "3b940026-6013-4d8a-846d-ab0334e7731b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4011,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportDir": "cypress/reports/mocha",
+        "reportTitle": "Senior QA Challenge: Raffy Rodriguez's Test's results",
+        "reportFilename": "report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mm/dd/yyyy HH:MM"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
