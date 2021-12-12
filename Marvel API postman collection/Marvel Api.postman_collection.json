@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "241724e0-8d86-4bf6-9044-fa9faf546558",
+		"name": "Marvel Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Marvel character  Spiderman",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Total of Spider-Man Comics\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data.total).to.eql(4084);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.marvel.com:443/v1/public/characters/1009610/comics?ts=TIMESTAMP_HERE&apikey=PUBLIC_API_KEY&hash=YOUR_HAS&limit=100",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"v1",
+						"public",
+						"characters",
+						"1009610",
+						"comics"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "TIMESTAMP_HERE"
+						},
+						{
+							"key": "apikey",
+							"value": "PUBLIC_API_KEY"
+						},
+						{
+							"key": "hash",
+							"value": "YOUR_HAS"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marvel Characters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Total of Marvels Characters\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data.total).to.eql(1559);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.marvel.com:443/v1/public/characters?ts=TIMESTAMP&apikey=PUBLIC_KEY&hash=YOUR_HASH&limit=100",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"v1",
+						"public",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "TIMESTAMP"
+						},
+						{
+							"key": "apikey",
+							"value": "PUBLIC_KEY"
+						},
+						{
+							"key": "hash",
+							"value": "YOUR_HASH"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marvel X-Man request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Count Value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data.count).to.eql(10);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.marvel.com:443/v1/public/comics/18186/characters?ts=TIMESTAMP&apikey=PUBLIC_KEY&hash=YOUR_HASH&limit=100",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"v1",
+						"public",
+						"comics",
+						"18186",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "TIMESTAMP"
+						},
+						{
+							"key": "apikey",
+							"value": "PUBLIC_KEY"
+						},
+						{
+							"key": "hash",
+							"value": "YOUR_HASH"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
