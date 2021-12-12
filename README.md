@@ -77,7 +77,7 @@ For the API testing it was required to be automated 3 request to the Marvel Comi
   git clone https://github.com/elraffy/Senior-QA-Challenge-Raffy-Rodriguez.git  
 ```
 
-* Intall all packages and dependencies for the project.
+* Install all packages and dependencies for the project.
 
 ```bash
   npm install  
