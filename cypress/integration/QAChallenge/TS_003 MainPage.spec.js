@@ -28,7 +28,7 @@ describe('Main Page test cases', function(){
 
     });
 
-    it('Search for an using the search bar', function(){
+    it('Search for an item using the search bar', function(){
       
      MAIN_PAGE.searchBar().type(this.data.item);
      MAIN_PAGE.searchButton().click();   
