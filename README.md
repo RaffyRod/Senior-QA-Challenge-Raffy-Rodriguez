@@ -163,7 +163,7 @@ This will automatically run all test and generate the report at the end of execu
 
 1. Go to the [Hash generator](https://www.md5hashgenerator.com/) website.
 
-2. On the text-area field paste the API key the following way preceded by the number `1` that will works as a `Timestamp`
+2. On the text-area field paste the API keys the following way preceded by the number `1` that will works as a `Timestamp`
 
 ```bash   
     ` 1 + Marvel's API privateKey + Marvel's API publicKey`
