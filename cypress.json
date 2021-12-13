@@ -11,6 +11,7 @@
                 "reportDir": "cypress/reports/mocha",
                 "reportTitle": "Senior QA Challenge: Raffy Rodriguez's Test's results",
                 "reportFilename" : "report",
+                "reportPageTitle": "Senior QA Challenge's Test Results",
                 "quiet": true,                
                 "overwrite": false,
                 "html": false,
