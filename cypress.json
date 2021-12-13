@@ -10,7 +10,7 @@
                 "charts": true,
                 "reportDir": "cypress/reports/mocha",
                 "reportTitle": "Senior QA Challenge: Raffy Rodriguez's Test's results",
-                "reportFilename" : "QA Challenge's report",
+                "reportFilename" : "report",
                 "quiet": true,                
                 "overwrite": false,
                 "html": false,
