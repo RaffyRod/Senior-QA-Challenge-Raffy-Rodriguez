@@ -4,7 +4,7 @@ class SignUpPage{
         return cy.get('.login');
     }
 
-    createEmail(){
+    setEmailInput(){
         return cy.get('#email_create');
     }
 
@@ -20,27 +20,27 @@ class SignUpPage{
         return cy.get('#id_gender2');
     }
 
-    firstName(){
+    setFirstName(){
         return cy.get('#customer_firstname');
     }
 
-    lastName(){
+    setLastName(){
         return cy.get('#customer_lastname');
     }
 
-    userPassword(){
+    setUserPassword(){
         return cy.get('#passwd');
     }
 
-    dayOfBirth(){
+    setDayOfBirth(){
         return cy.get('#days');
     }
 
-    monthOfBirth(){
+    setMonthOfBirth(){
         return cy.get('#months');
     }
 
-    yearOfBirth(){
+    setYearOfBirth(){
         return cy.get('#years');
     }
 
@@ -54,70 +54,65 @@ class SignUpPage{
 
     //Address Fields
 
-    addressName(){
+    setAddressName(){
         return cy.get('#firstname');
     }
 
-    addressLastName(){
+    setAddressLastName(){
         return cy.get('#lastname');
     }
 
-    companyName(){
+    setCompanyName(){
         return cy.get('#company');
     }
 
-    addressFirstLine(){
+    setAddressFirstLine(){
         return cy.get('#address1');
     }
 
-    addressSecondLine(){
+    setAddressSecondLine(){
         return cy.get('#address2');
     }
 
-    addressCity(){
+    setAddressCity(){
         return cy.get('#city');
     }
 
-    addressState(){
+    setAddressState(){
         return  cy.get('#id_state');
     }
 
-    addressZipcode(){
+    setAddressZipcode(){
         return cy.get('#postcode');
     }
 
-    addressCountry(){
+    setAddressCountry(){
         return cy.get('#id_country');
     }
 
-    addressMoreInfo(){
+    setAddressMoreInfo(){
         return cy.get('#other');
     }
 
-    addressHomePhone(){
+    setAddressHomePhone(){
         return cy.get('#phone');
     }
 
-    addressMobilePhone(){
+    setAddressMobilePhone(){
         return cy.get('#phone_mobile');
     }
 
-    addressAlias(){
+    setAddressAlias(){
         return cy.get('#alias');
     }
 
-    addressRegisterButton(){
+    addressSubmitButton(){
         return cy.get('#submitAccount > span');
     }
 
     infoAccount(){
         return cy.get('.info-account');
     }
-
-
-
-
-
 }
 
 export default SignUpPage;

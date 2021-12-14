@@ -5,9 +5,9 @@
     "passes": 19,
     "pending": 0,
     "failures": 0,
-    "start": "2021-12-12T07:58:21.749Z",
-    "end": "2021-12-12T08:01:28.687Z",
-    "duration": 173775,
+    "start": "2021-12-13T14:08:10.119Z",
+    "end": "2021-12-13T14:12:32.592Z",
+    "duration": 248734,
     "testsRegistered": 19,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,65 +18,7 @@
   },
   "results": [
     {
-      "uuid": "67c099eb-2721-4d9e-a06e-5a1c3388f4bb",
-      "title": "",
-      "fullFile": "cypress/integration/QAChallenge/TS_002 signUp.spec.js",
-      "file": "cypress/integration/QAChallenge/TS_002 signUp.spec.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "a77c76be-4b02-4066-9bfe-33b95512be67",
-          "title": "SignUp",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "SignUp",
-              "fullTitle": "SignUp SignUp",
-              "timedOut": null,
-              "duration": 16626,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "SIGNUP.logingButton().click();\nSIGNUP.createEmail().type(USER.email);\nSIGNUP.submitEmailButton().click();\ncy.url().should('eq', 'http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation'); //filling out the user information\nSIGNUP.firstName().type(USER.name);\nSIGNUP.lastName().type(USER.lastName);\nSIGNUP.userPassword().type(USER.password);\nSIGNUP.dayOfBirth().select(USER.dayOfBirth);\nSIGNUP.monthOfBirth().select(USER.monthOfBirth);\nSIGNUP.yearOfBirth().select(USER.yearOfBirth);\nSIGNUP.signForNewsLetter().check();\nSIGNUP.receiveSpecialOffers().check();\nSIGNUP.companyName().type(USER.company);\nSIGNUP.addressFirstLine().type(USER.address);\nSIGNUP.addressSecondLine().type(USER.secondaryAddress);\nSIGNUP.addressCity().type(USER.city);\nSIGNUP.addressZipcode().type(USER.zipCode);\nSIGNUP.addressCountry().select(USER.country);\nSIGNUP.addressMoreInfo().type(USER.moreInfo);\nSIGNUP.addressHomePhone().type(USER.homePhone);\nSIGNUP.addressMobilePhone().type(USER.mobilePhone);\nSIGNUP.addressAlias().type(USER.addressAlias); //the state field needs to be filled out last due to some issues with the website\nSIGNUP.addressState().select(USER.state);\nSIGNUP.addressRegisterButton().click();\ncy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');\nSIGNUP.infoAccount().should('have.text', 'Welcome to your account. Here you can manage all of your personal information and orders.');",
-              "err": {},
-              "uuid": "8c0c1ec8-46af-4459-973e-d0c929938208",
-              "parentUUID": "a77c76be-4b02-4066-9bfe-33b95512be67",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "8c0c1ec8-46af-4459-973e-d0c929938208"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 16626,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "7c13d512-050f-4f19-af13-c4dce8dfc38c",
+      "uuid": "c7c972d5-10ae-4395-80d3-6e9e223c1dc2",
       "title": "",
       "fullFile": "cypress/integration/QAChallenge/TS_001 Login and Logout.spec.js",
       "file": "cypress/integration/QAChallenge/TS_001 Login and Logout.spec.js",
@@ -85,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "99832e6a-ad15-4a53-a9a9-cc8937fcb441",
+          "uuid": "697d3da7-ffb3-407b-a7ef-7e302fdc5319",
           "title": "Login and Logout",
           "fullFile": "",
           "file": "",
@@ -96,17 +38,17 @@
               "title": "login case",
               "fullTitle": "Login and Logout login case",
               "timedOut": null,
-              "duration": 7833,
+              "duration": 25960,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.login();\ncy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');",
               "err": {},
-              "uuid": "f8f927b3-bc59-4b4b-858b-0372f827e9ea",
-              "parentUUID": "99832e6a-ad15-4a53-a9a9-cc8937fcb441",
+              "uuid": "19489dba-e2b9-438f-9514-e005e5e33bae",
+              "parentUUID": "697d3da7-ffb3-407b-a7ef-7e302fdc5319",
               "isHook": false,
               "skipped": false
             },
@@ -114,30 +56,30 @@
               "title": "logOut",
               "fullTitle": "Login and Logout logOut",
               "timedOut": null,
-              "duration": 2042,
+              "duration": 7867,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.signOut();\nSIGN.authObject().should('be.visible');",
               "err": {},
-              "uuid": "96939e79-5cc2-4527-862c-4f5238b5827c",
-              "parentUUID": "99832e6a-ad15-4a53-a9a9-cc8937fcb441",
+              "uuid": "53dd6d7b-6247-4f82-970d-de560fe1e352",
+              "parentUUID": "697d3da7-ffb3-407b-a7ef-7e302fdc5319",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f8f927b3-bc59-4b4b-858b-0372f827e9ea",
-            "96939e79-5cc2-4527-862c-4f5238b5827c"
+            "19489dba-e2b9-438f-9514-e005e5e33bae",
+            "53dd6d7b-6247-4f82-970d-de560fe1e352"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9875,
+          "duration": 33827,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -153,7 +95,65 @@
       "_timeout": 2000
     },
     {
-      "uuid": "304b6a22-34c9-403d-9b0d-dab9c250bc9e",
+      "uuid": "5be1779c-e0c9-4aa9-91c1-c4304b254f32",
+      "title": "",
+      "fullFile": "cypress/integration/QAChallenge/TS_002 signUp.spec.js",
+      "file": "cypress/integration/QAChallenge/TS_002 signUp.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71a355a0-9ad0-4d5a-956e-03162fd4c97f",
+          "title": "SignUp",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SignUp",
+              "fullTitle": "SignUp SignUp",
+              "timedOut": null,
+              "duration": 21907,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "SIGNUP.logingButton().click();\nSIGNUP.createEmail().type(USER.email);\nSIGNUP.submitEmailButton().click();\ncy.url().should('eq', 'http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation'); //filling out the user information\nSIGNUP.firstName().type(USER.name);\nSIGNUP.lastName().type(USER.lastName);\nSIGNUP.userPassword().type(USER.password);\nSIGNUP.dayOfBirth().select(USER.dayOfBirth);\nSIGNUP.monthOfBirth().select(USER.monthOfBirth);\nSIGNUP.yearOfBirth().select(USER.yearOfBirth);\nSIGNUP.signForNewsLetter().check();\nSIGNUP.receiveSpecialOffers().check();\nSIGNUP.companyName().type(USER.company);\nSIGNUP.addressFirstLine().type(USER.address);\nSIGNUP.addressSecondLine().type(USER.secondaryAddress);\nSIGNUP.addressCity().type(USER.city);\nSIGNUP.addressZipcode().type(USER.zipCode);\nSIGNUP.addressCountry().select(USER.country);\nSIGNUP.addressMoreInfo().type(USER.moreInfo);\nSIGNUP.addressHomePhone().type(USER.homePhone);\nSIGNUP.addressMobilePhone().type(USER.mobilePhone);\nSIGNUP.addressAlias().type(USER.addressAlias); //the state field needs to be filled out last due to some issues with the website\nSIGNUP.addressState().select(USER.state);\nSIGNUP.addressRegisterButton().click();\ncy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');\nSIGNUP.infoAccount().should('have.text', 'Welcome to your account. Here you can manage all of your personal information and orders.');",
+              "err": {},
+              "uuid": "2b64b971-06e8-46f4-b83d-de7d76d74bf4",
+              "parentUUID": "71a355a0-9ad0-4d5a-956e-03162fd4c97f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b64b971-06e8-46f4-b83d-de7d76d74bf4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21907,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a2076e5b-d1e6-4855-9a7e-b275c9d27546",
       "title": "",
       "fullFile": "cypress/integration/QAChallenge/TS_003 MainPage.spec.js",
       "file": "cypress/integration/QAChallenge/TS_003 MainPage.spec.js",
@@ -162,7 +162,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+          "uuid": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
           "title": "Main Page test cases",
           "fullFile": "",
           "file": "",
@@ -173,7 +173,7 @@
               "title": "Best Seller section",
               "fullTitle": "Main Page test cases Best Seller section",
               "timedOut": null,
-              "duration": 34376,
+              "duration": 18710,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -182,8 +182,8 @@
               "context": null,
               "code": "MAIN_PAGE.bestSellers().click();\nMAIN_PAGE.activeBestSeller().should('be.visible');",
               "err": {},
-              "uuid": "c6f30cea-20b2-4442-8963-a56e28b7cb7f",
-              "parentUUID": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+              "uuid": "68574aff-220c-4f6b-b4c5-2f91249d07fe",
+              "parentUUID": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
               "isHook": false,
               "skipped": false
             },
@@ -191,7 +191,7 @@
               "title": "Search for an item using the search bar",
               "fullTitle": "Main Page test cases Search for an item using the search bar",
               "timedOut": null,
-              "duration": 13658,
+              "duration": 23852,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -200,8 +200,8 @@
               "context": null,
               "code": "MAIN_PAGE.searchBar().type(this.data.item);\nMAIN_PAGE.searchButton().click();\nMAIN_PAGE.itemTitle(this.data.item).should('be.visible');",
               "err": {},
-              "uuid": "2c96981e-a2d6-496c-b4d8-e56c85423289",
-              "parentUUID": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+              "uuid": "892b0484-2952-403a-8ad2-8e53acfbf663",
+              "parentUUID": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
               "isHook": false,
               "skipped": false
             },
@@ -209,7 +209,7 @@
               "title": "Adding to the wish list",
               "fullTitle": "Main Page test cases Adding to the wish list",
               "timedOut": null,
-              "duration": 16339,
+              "duration": 22174,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -218,8 +218,8 @@
               "context": null,
               "code": "MAIN_PAGE.searchBar().type(this.data.item);\nMAIN_PAGE.searchButton().click();\nMAIN_PAGE.wishItem().trigger('mouseover');\nMAIN_PAGE.wishItemMore().click();\nMAIN_PAGE.wishListButton().click();\nMAIN_PAGE.wishAddedMsg().should('have.text', 'Added to your wishlist.');\nMAIN_PAGE.wishAddedMsgClose().click();",
               "err": {},
-              "uuid": "22dd29b6-e8de-44d6-9a46-13134481a0cd",
-              "parentUUID": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+              "uuid": "6094cb8e-982e-4afa-bdd8-110016524517",
+              "parentUUID": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
               "isHook": false,
               "skipped": false
             },
@@ -227,7 +227,7 @@
               "title": "Subscribe to NewsLetter",
               "fullTitle": "Main Page test cases Subscribe to NewsLetter",
               "timedOut": null,
-              "duration": 16856,
+              "duration": 20140,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -236,8 +236,8 @@
               "context": null,
               "code": "MAIN_PAGE.newsBar().click();\nMAIN_PAGE.newsBar().type(USER.newsEmail);\ncy.wait(5000);\nMAIN_PAGE.newsButton().click();\nMAIN_PAGE.newsAlert().should('be.visible'); //.should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');",
               "err": {},
-              "uuid": "9794d115-ce9c-4c77-98bf-19f7d15e3052",
-              "parentUUID": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+              "uuid": "3c0b5702-e09d-4985-bc75-bd7eaa548b5b",
+              "parentUUID": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
               "isHook": false,
               "skipped": false
             },
@@ -245,7 +245,7 @@
               "title": "Add to shopping Cart",
               "fullTitle": "Main Page test cases Add to shopping Cart",
               "timedOut": null,
-              "duration": 11707,
+              "duration": 41635,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -254,8 +254,8 @@
               "context": null,
               "code": "cy.addToShoppingCart(this.data.item);\nCHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');\nCHECK.cartQuantity().should('have.text', this.data.quantity);\nCHECK.cartColor().should('include.text', this.data.color);\nCHECK.cartItemName().should('have.text', this.data.item);\nCHECK.cartTotal().should('have.text', this.data.price);",
               "err": {},
-              "uuid": "67468c1a-3405-4023-9097-bcf8c229b4ce",
-              "parentUUID": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+              "uuid": "00fc9291-1ad7-4d88-83ce-bafc158f35dc",
+              "parentUUID": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
               "isHook": false,
               "skipped": false
             },
@@ -263,7 +263,7 @@
               "title": "Remove from shopping cart",
               "fullTitle": "Main Page test cases Remove from shopping cart",
               "timedOut": null,
-              "duration": 11283,
+              "duration": 17692,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -272,25 +272,25 @@
               "context": null,
               "code": "cy.addToShoppingCart(this.data.item);\nCHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');\nCHECK.goToCheckOut().click();\nCHECK.deleteFromCheckOut().click();\nCHECK.checkOutAlert().should('have.text', 'Your shopping cart is empty.');",
               "err": {},
-              "uuid": "5ea129ea-1001-462f-bfc6-aeecadaec285",
-              "parentUUID": "96060b36-17d7-44d7-8fbb-fe8f92f956eb",
+              "uuid": "3436501c-d829-4052-85ac-03e3315d0997",
+              "parentUUID": "476c3a84-2756-4a7b-89c4-56cb2fdc8561",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c6f30cea-20b2-4442-8963-a56e28b7cb7f",
-            "2c96981e-a2d6-496c-b4d8-e56c85423289",
-            "22dd29b6-e8de-44d6-9a46-13134481a0cd",
-            "9794d115-ce9c-4c77-98bf-19f7d15e3052",
-            "67468c1a-3405-4023-9097-bcf8c229b4ce",
-            "5ea129ea-1001-462f-bfc6-aeecadaec285"
+            "68574aff-220c-4f6b-b4c5-2f91249d07fe",
+            "892b0484-2952-403a-8ad2-8e53acfbf663",
+            "6094cb8e-982e-4afa-bdd8-110016524517",
+            "3c0b5702-e09d-4985-bc75-bd7eaa548b5b",
+            "00fc9291-1ad7-4d88-83ce-bafc158f35dc",
+            "3436501c-d829-4052-85ac-03e3315d0997"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 104219,
+          "duration": 144203,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -306,7 +306,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "4d177a58-3df2-4ab4-945f-735dbf028edc",
+      "uuid": "74dcad94-920a-4c7a-9e68-8155377c1bad",
       "title": "",
       "fullFile": "cypress/integration/QAChallenge/TS_005 marvel-api-test.spec.js",
       "file": "cypress/integration/QAChallenge/TS_005 marvel-api-test.spec.js",
@@ -315,7 +315,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1fe3f7e1-1937-4acb-b72e-6ce21db7a455",
+          "uuid": "00fced41-06cc-446b-9daf-0b030c5fecc9",
           "title": "All Marvel Characters test",
           "fullFile": "",
           "file": "",
@@ -326,7 +326,7 @@
               "title": "Get all Marvel characters",
               "fullTitle": "All Marvel Characters test Get all Marvel characters",
               "timedOut": null,
-              "duration": 2085,
+              "duration": 2195,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -335,8 +335,8 @@
               "context": null,
               "code": "cy.request(`${API.url}/v1/public/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`).then(response => {\n  expect(response.body).to.have.property('code', 200);\n  expect(response.body).not.to.be.null;\n  expect(response.body.data).to.have.property('limit', 100);\n});",
               "err": {},
-              "uuid": "fd11a90f-b548-452e-9d37-ac3061f27d43",
-              "parentUUID": "1fe3f7e1-1937-4acb-b72e-6ce21db7a455",
+              "uuid": "290084e9-5240-46c5-8bf9-e0df3fc4ec79",
+              "parentUUID": "00fced41-06cc-446b-9daf-0b030c5fecc9",
               "isHook": false,
               "skipped": false
             },
@@ -344,7 +344,7 @@
               "title": "Get More than 100 Marvel characters",
               "fullTitle": "All Marvel Characters test Get More than 100 Marvel characters",
               "timedOut": null,
-              "duration": 166,
+              "duration": 145,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -353,8 +353,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit + 1}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 409);\n  expect(response.body).to.have.property('status', 'You may not request more than 100 items.');\n});",
               "err": {},
-              "uuid": "0900292b-d842-4d60-bfc8-cdd585047b59",
-              "parentUUID": "1fe3f7e1-1937-4acb-b72e-6ce21db7a455",
+              "uuid": "b74c6750-ddc8-49ea-a6c0-f4c87235ef0e",
+              "parentUUID": "00fced41-06cc-446b-9daf-0b030c5fecc9",
               "isHook": false,
               "skipped": false
             },
@@ -362,7 +362,7 @@
               "title": "Missing timestamp, unable to authenticate",
               "fullTitle": "All Marvel Characters test Missing timestamp, unable to authenticate",
               "timedOut": null,
-              "duration": 125,
+              "duration": 103,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -371,22 +371,22 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/characters?&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 'MissingParameter');\n  expect(response.body).to.have.property('message', 'You must provide a timestamp.');\n});",
               "err": {},
-              "uuid": "bc5b2890-0ebf-4a43-b534-cb5b824dda7e",
-              "parentUUID": "1fe3f7e1-1937-4acb-b72e-6ce21db7a455",
+              "uuid": "45fb8157-e4bb-4d70-98f6-640d24c84c80",
+              "parentUUID": "00fced41-06cc-446b-9daf-0b030c5fecc9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fd11a90f-b548-452e-9d37-ac3061f27d43",
-            "0900292b-d842-4d60-bfc8-cdd585047b59",
-            "bc5b2890-0ebf-4a43-b534-cb5b824dda7e"
+            "290084e9-5240-46c5-8bf9-e0df3fc4ec79",
+            "b74c6750-ddc8-49ea-a6c0-f4c87235ef0e",
+            "45fb8157-e4bb-4d70-98f6-640d24c84c80"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2376,
+          "duration": 2443,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -402,7 +402,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "fa168292-3058-4887-893b-121ae3cdf2a5",
+      "uuid": "e1000d45-076c-4e43-8dda-4c5744c919fa",
       "title": "",
       "fullFile": "cypress/integration/QAChallenge/TS_006 marvel-character-api.spec.js",
       "file": "cypress/integration/QAChallenge/TS_006 marvel-character-api.spec.js",
@@ -411,7 +411,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0d3303a9-4e69-46b1-91ed-e01b3ff25cb7",
+          "uuid": "30c1686f-8648-40bb-af1d-6629992faf74",
           "title": "Marvel Character test cases",
           "fullFile": "",
           "file": "",
@@ -422,7 +422,7 @@
               "title": "Fetch Spider-Man Comics",
               "fullTitle": "Marvel Character test cases Fetch Spider-Man Comics",
               "timedOut": null,
-              "duration": 1082,
+              "duration": 4712,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -431,8 +431,8 @@
               "context": null,
               "code": "cy.request(`${API.url}/v1/public/characters/${this.id}/comics?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`).then(response => {\n  expect(response.body).not.to.be.null;\n  expect(response).to.have.property('duration');\n  expect(response.body.data).to.have.property('count');\n}).its('headers').its('content-type').should('include', 'application/json');",
               "err": {},
-              "uuid": "83711c8a-f08a-4cc1-8f7a-dfb6ce7efd0b",
-              "parentUUID": "0d3303a9-4e69-46b1-91ed-e01b3ff25cb7",
+              "uuid": "21dd00da-424c-4431-a512-f990a58c0c0f",
+              "parentUUID": "30c1686f-8648-40bb-af1d-6629992faf74",
               "isHook": false,
               "skipped": false
             },
@@ -440,7 +440,7 @@
               "title": "Attempting to fetch more than 100 Spider-Man Comics",
               "fullTitle": "Marvel Character test cases Attempting to fetch more than 100 Spider-Man Comics",
               "timedOut": null,
-              "duration": 1031,
+              "duration": 1497,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -449,8 +449,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/characters/${this.id}/comics?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit + 1}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 409);\n  expect(response.body).to.have.property('status', 'You may not request more than 100 items.');\n});",
               "err": {},
-              "uuid": "497414c5-18aa-49a2-ae2b-12534632402a",
-              "parentUUID": "0d3303a9-4e69-46b1-91ed-e01b3ff25cb7",
+              "uuid": "58e98d89-0b17-4a24-bef8-bcadc4b6439a",
+              "parentUUID": "30c1686f-8648-40bb-af1d-6629992faf74",
               "isHook": false,
               "skipped": false
             },
@@ -458,7 +458,7 @@
               "title": "Missing hash, unable to authenticate",
               "fullTitle": "Marvel Character test cases Missing hash, unable to authenticate",
               "timedOut": null,
-              "duration": 1072,
+              "duration": 1112,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -467,22 +467,22 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/characters/${this.id}/comics?ts=${API.timestamp}&apikey=${API.publicKey}&limit=${API.limit + 1}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 'MissingParameter');\n  expect(response.body).to.have.property('message', 'You must provide a hash.');\n});",
               "err": {},
-              "uuid": "ec8cf728-6b0c-4c3c-93bf-7c40ac511f6f",
-              "parentUUID": "0d3303a9-4e69-46b1-91ed-e01b3ff25cb7",
+              "uuid": "e553a0cd-c7f8-4e1e-aba5-070b07fc6250",
+              "parentUUID": "30c1686f-8648-40bb-af1d-6629992faf74",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "83711c8a-f08a-4cc1-8f7a-dfb6ce7efd0b",
-            "497414c5-18aa-49a2-ae2b-12534632402a",
-            "ec8cf728-6b0c-4c3c-93bf-7c40ac511f6f"
+            "21dd00da-424c-4431-a512-f990a58c0c0f",
+            "58e98d89-0b17-4a24-bef8-bcadc4b6439a",
+            "e553a0cd-c7f8-4e1e-aba5-070b07fc6250"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3185,
+          "duration": 7321,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -498,7 +498,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e26d050f-826f-40fb-92a5-aeeed9da6bf1",
+      "uuid": "eed4b0f7-add7-4758-b52b-620f5391177d",
       "title": "",
       "fullFile": "cypress/integration/QAChallenge/TS_007 marvel-xman-test.spec.js",
       "file": "cypress/integration/QAChallenge/TS_007 marvel-xman-test.spec.js",
@@ -507,7 +507,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "87eecadc-0355-4c59-9159-68005aa7c1f5",
+          "uuid": "727072af-de71-4efd-aef9-ab1f27098651",
           "title": "Marvel X-man Comic Character Test",
           "fullFile": "",
           "file": "",
@@ -518,17 +518,17 @@
               "title": "Get X-man Serie Characters",
               "fullTitle": "Marvel X-man Comic Character Test Get X-man Serie Characters",
               "timedOut": null,
-              "duration": 1096,
+              "duration": 10036,
               "state": "passed",
-              "speed": "fast",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.request(`${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit}`).then(response => {\n  expect(response.body).not.to.be.null;\n  expect(response).to.have.property('duration');\n  expect(response.body).to.have.property('code', 200);\n  expect(response.body.data.results).to.have.length(10);\n});",
               "err": {},
-              "uuid": "c5abcc66-4d44-4fdf-8d82-cfad096a453f",
-              "parentUUID": "87eecadc-0355-4c59-9159-68005aa7c1f5",
+              "uuid": "93dfd10d-c744-42d1-9a89-fee08519d8be",
+              "parentUUID": "727072af-de71-4efd-aef9-ab1f27098651",
               "isHook": false,
               "skipped": false
             },
@@ -536,7 +536,7 @@
               "title": "Missing hash, unable to authenticate",
               "fullTitle": "Marvel X-man Comic Character Test Missing hash, unable to authenticate",
               "timedOut": null,
-              "duration": 845,
+              "duration": 848,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -545,8 +545,8 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&limit=${API.limit}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 'MissingParameter');\n  expect(response.body).to.have.property('message', 'You must provide a hash.');\n});",
               "err": {},
-              "uuid": "a5d2d951-bb97-4e5c-bcd5-86e64fe1b161",
-              "parentUUID": "87eecadc-0355-4c59-9159-68005aa7c1f5",
+              "uuid": "a803f61c-65f1-4bae-a231-41c82fbeed2e",
+              "parentUUID": "727072af-de71-4efd-aef9-ab1f27098651",
               "isHook": false,
               "skipped": false
             },
@@ -554,7 +554,7 @@
               "title": "Attempting to get more than 100 X-Man",
               "fullTitle": "Marvel X-man Comic Character Test Attempting to get more than 100 X-Man",
               "timedOut": null,
-              "duration": 869,
+              "duration": 793,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -563,22 +563,22 @@
               "context": null,
               "code": "cy.request({\n  method: 'GET',\n  url: `${API.url}/v1/public/comics/${this.id}/characters?ts=${API.timestamp}&apikey=${API.publicKey}&hash=${API.hash}&limit=${API.limit + 1}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.body).to.have.property('code', 409);\n  expect(response.body).to.have.property('status', 'You may not request more than 100 items.');\n});",
               "err": {},
-              "uuid": "1f37434b-dcb4-4a0f-8753-d4fc639549d6",
-              "parentUUID": "87eecadc-0355-4c59-9159-68005aa7c1f5",
+              "uuid": "c53c47e2-b958-4c1f-b4ee-3e67fbed18fd",
+              "parentUUID": "727072af-de71-4efd-aef9-ab1f27098651",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c5abcc66-4d44-4fdf-8d82-cfad096a453f",
-            "a5d2d951-bb97-4e5c-bcd5-86e64fe1b161",
-            "1f37434b-dcb4-4a0f-8753-d4fc639549d6"
+            "93dfd10d-c744-42d1-9a89-fee08519d8be",
+            "a803f61c-65f1-4bae-a231-41c82fbeed2e",
+            "c53c47e2-b958-4c1f-b4ee-3e67fbed18fd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2810,
+          "duration": 11677,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -594,7 +594,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "ec77a885-204e-460f-8d5c-0bb653fd282f",
+      "uuid": "57b1c271-2c7b-4257-a1d8-5a6f78b6599f",
       "title": "",
       "fullFile": "cypress/integration/QAChallenge/TS_004 checkOut.spec.js",
       "file": "cypress/integration/QAChallenge/TS_004 checkOut.spec.js",
@@ -603,7 +603,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ddc4b6d5-3be6-46ca-a10c-50e55c3c1cda",
+          "uuid": "d703a372-8781-43d6-a97b-6bf5ce4b8bac",
           "title": "Checkout Test case",
           "fullFile": "",
           "file": "",
@@ -614,7 +614,7 @@
               "title": "Checkout Item",
               "fullTitle": "Checkout Test case Checkout Item",
               "timedOut": null,
-              "duration": 34684,
+              "duration": 27356,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -623,20 +623,20 @@
               "context": null,
               "code": "//Adding Item to shopping Cart\ncy.addToShoppingCart(this.data.item);\nCHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');\nCHECK.cartQuantity().should('have.text', this.data.quantity);\nCHECK.cartColor().should('include.text', this.data.color);\nCHECK.cartItemName().should('have.text', this.data.item);\nCHECK.cartTotal().should('have.text', this.data.price);\nCHECK.goToCheckOut().click(); //checkOut Process\nCHECK.checkoutButton().click();\nCHECK.checkoutButton().click();\nCHECK.termsOfService().check().should('be.checked');\nCHECK.checkoutButton().click();\nCHECK.payWithBankWire().click();\nCHECK.paymentName().should('include.text', 'Bank-wire payment.');\nCHECK.checkoutButton().click();\nCHECK.orderConfirmation().should('have.text', 'Your order on My Store is complete.');\nCHECK.finalPrice().should('have.text', '$29.00');\ncy.signOut();",
               "err": {},
-              "uuid": "7c49a349-eaa5-4efb-a9bc-581e263ce894",
-              "parentUUID": "ddc4b6d5-3be6-46ca-a10c-50e55c3c1cda",
+              "uuid": "fe4e04fa-0ac1-494b-bf6c-4e9c420f18ef",
+              "parentUUID": "d703a372-8781-43d6-a97b-6bf5ce4b8bac",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7c49a349-eaa5-4efb-a9bc-581e263ce894"
+            "fe4e04fa-0ac1-494b-bf6c-4e9c420f18ef"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 34684,
+          "duration": 27356,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -675,6 +675,7 @@
         "reportDir": "cypress/reports/mocha",
         "reportTitle": "Senior QA Challenge: Raffy Rodriguez's Test's results",
         "reportFilename": "report",
+        "reportPageTitle": "Senior QA Challenge's Test Results",
         "quiet": true,
         "overwrite": false,
         "html": false,

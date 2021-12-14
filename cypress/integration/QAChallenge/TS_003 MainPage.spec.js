@@ -3,68 +3,68 @@ import CheckOutPage from "../../support/pageObjets/checkOutPage";
 import getUser  from "../../support/utilities/helpers";
 
 
-const MAIN_PAGE = new MainPage();
-const CHECK = new CheckOutPage();
-const USER = getUser();
+const mainPage = new MainPage();
+const check = new CheckOutPage();
+const user = getUser();
+
 
 describe('Main Page test cases', function(){
 
     beforeEach(function(){
+        
         cy.login();
         cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
-        cy.goToHome();
-        cy.fixture('items').then(function(data){ this.data = data});
+        cy.goToHome();  
+        cy.fixture('items').then(function(data){ this.data = data});      
 
     });
     
 
     it('Best Seller section', function(){
-       MAIN_PAGE.bestSellers().click();
-       MAIN_PAGE.activeBestSeller().should('be.visible');     
+       mainPage.bestSellers().click();
+       mainPage.activeBestSeller().should('be.visible');     
 
     });
 
     it('Search for an item using the search bar', function(){
       
-     MAIN_PAGE.searchBar().type(this.data.item);
-     MAIN_PAGE.searchButton().click();   
-     MAIN_PAGE.itemTitle(this.data.item).should('be.visible');         
+     mainPage.searchBar().type(this.data.item);
+     mainPage.searchButton().click();   
+     mainPage.itemTitle(this.data.item).should('be.visible');         
         
     });
 
     it('Adding to the wish list', function(){
-        MAIN_PAGE.searchBar().type(this.data.item);
-        MAIN_PAGE.searchButton().click();   
-        MAIN_PAGE.wishItem().trigger('mouseover');
-        MAIN_PAGE.wishItemMore().click();
-        MAIN_PAGE.wishListButton().click(); 
-        MAIN_PAGE.wishAddedMsg().should('have.text', 'Added to your wishlist.');
-        MAIN_PAGE.wishAddedMsgClose().click();            
+        mainPage.searchBar().type(this.data.item);
+        mainPage.searchButton().click();   
+        mainPage.wishItem().trigger('mouseover');
+        mainPage.wishItemMore().click();
+        mainPage.wishListButton().click(); 
+        mainPage.wishAddedMsg().should('have.text', 'Added to your wishlist.');
+        mainPage.wishAddedMsgClose().click();            
     });
 
     it('Subscribe to NewsLetter', function(){
-        MAIN_PAGE.newsBar().click();
-        MAIN_PAGE.newsBar().type(USER.newsEmail);
-        cy.wait(5000);
-        MAIN_PAGE.newsButton().click();
-        MAIN_PAGE.newsAlert().should('be.visible'); 
-        //.should('have.text', ' Newsletter : You have successfully subscribed to this newsletter.');
+        mainPage.newsBar().click();
+        mainPage.newsBar().type(user.newsEmail);        
+        mainPage.newsButton().click();
+        mainPage.newsAlert().should('be.visible');         
     });
 
     it('Add to shopping Cart', function(){
         cy.addToShoppingCart(this.data.item);
-        CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
-        CHECK.cartQuantity().should('have.text', this.data.quantity);
-        CHECK.cartColor().should('include.text', this.data.color);
-        CHECK.cartItemName().should('have.text', this.data.item);
-        CHECK.cartTotal().should('have.text', this.data.price);
+        check.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
+        check.cartQuantity().should('have.text', this.data.quantity);
+        check.cartColor().should('include.text', this.data.color);
+        check.cartItemName().should('have.text', this.data.item);
+        check.cartTotal().should('have.text', this.data.price);
     });
 
     it('Remove from shopping cart', function(){
         cy.addToShoppingCart(this.data.item);
-        CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
-        CHECK.goToCheckOut().click();
-        CHECK.deleteFromCheckOut().click();
-        CHECK.checkOutAlert().should('have.text', 'Your shopping cart is empty.')
+        check.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
+        check.goToCheckOut().click();
+        check.deleteFromCheckOut().click();
+        check.checkOutAlert().should('have.text', 'Your shopping cart is empty.')
     });   
 });

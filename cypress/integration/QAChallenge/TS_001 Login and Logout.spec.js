@@ -1,6 +1,6 @@
 import SignInPage from '../../support/pageObjets/signInPage';
 
-const SIGN = new SignInPage();
+const signIn = new SignInPage();
 
 /// <reference types="Cypress"/>
 describe('Login and Logout', function(){
@@ -13,7 +13,7 @@ describe('Login and Logout', function(){
 
     it('logOut', function(){
         cy.signOut();
-        SIGN.authObject().should('be.visible');
+        signIn.getAuthObjec().should('be.visible');
     });
     
 });

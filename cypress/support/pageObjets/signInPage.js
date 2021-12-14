@@ -1,14 +1,14 @@
 class SignInPage{
     
-    signInButton(){
+    getSignInButton(){
         return cy.get('.login');
     }
 
-    emailField(){
+    getEmailInput(){
         return cy.get('#email');
     }
 
-    passField(){
+    getPasswordInput(){
         return cy.get('#passwd');
     }
 
@@ -16,7 +16,7 @@ class SignInPage{
         return cy.get('#SubmitLogin > span');
     }
 
-    authObject(){
+    getAuthObject(){
         return cy.get('.navigation_page');
     }
 

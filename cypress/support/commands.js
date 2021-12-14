@@ -3,9 +3,9 @@ import MainPage from './pageObjets/mainPage';
 import CheckOutPage from './pageObjets/checkOutPage';
 
 
-const SIGNIN = new SignInPage();
-const MAIN_PAGE = new MainPage();
-const CHECK = new CheckOutPage();
+const signIn = new SignInPage();
+const mainPage = new MainPage();
+const checkOut = new CheckOutPage();
 
 
 
@@ -13,28 +13,27 @@ Cypress.Commands.add('login', function(email, password){
    
    cy.fixture('loginData').then(function(data){ this.data = data}).then(function(){
           cy.visit('/');
-          SIGNIN.signInButton().click();
-          SIGNIN.emailField().click();
-          SIGNIN.emailField().type(this.data.email);
-          SIGNIN.passField().type(this.data.pass);
-          SIGNIN.submitButton().click();
+          signIn.getSignInButton().click();
+          signIn.getEmailInput().click();
+          signIn.getEmailInput().type(this.data.email);
+          signIn.getPasswordInput().type(this.data.pass);
+          signIn.submitButton().click();
                    
-      });
-  
+      }); 
    
 });
 
 Cypress.Commands.add('signOut', function(){
-   MAIN_PAGE.logOut().click();
+   mainPage.logOut().click();
    
 });
 
 Cypress.Commands.add('goToHome', function(){
-   MAIN_PAGE.homeButton().click();
+   mainPage.homeButton().click();
 });
 
 Cypress.Commands.add('addToShoppingCart', function(item){
-   MAIN_PAGE.searchBar().type(item);
-   MAIN_PAGE.searchButton().click();  
-   CHECK.addToCartSectionButton().click();
+   mainPage.searchBar().type(item);
+   mainPage.searchButton().click();  
+   checkOut.addToCartSectionButton().click();
 });

@@ -1,6 +1,6 @@
 import CheckOutPage from "../../support/pageObjets/checkOutPage";
 
-const CHECK = new CheckOutPage();
+const checkOut = new CheckOutPage();
 
 describe('Checkout Test case', function(){
 
@@ -16,23 +16,23 @@ describe('Checkout Test case', function(){
 
         //Adding Item to shopping Cart
         cy.addToShoppingCart(this.data.item);
-        CHECK.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
-        CHECK.cartQuantity().should('have.text', this.data.quantity);
-        CHECK.cartColor().should('include.text', this.data.color);
-        CHECK.cartItemName().should('have.text', this.data.item);
-        CHECK.cartTotal().should('have.text', this.data.price);
-        CHECK.goToCheckOut().click();
+        checkOut.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
+        checkOut.cartQuantity().should('have.text', this.data.quantity);
+        checkOut.cartColor().should('include.text', this.data.color);
+        checkOut.cartItemName().should('have.text', this.data.item);
+        checkOut.cartTotal().should('have.text', this.data.price);
+        checkOut.goToCheckOut().click();
 
         //checkOut Process
-        CHECK.checkoutButton().click();
-        CHECK.checkoutButton().click();
-        CHECK.termsOfService().check().should('be.checked');
-        CHECK.checkoutButton().click();
-        CHECK.payWithBankWire().click();
-        CHECK.paymentName().should('include.text', 'Bank-wire payment.');
-        CHECK.checkoutButton().click();
-        CHECK.orderConfirmation().should('have.text', 'Your order on My Store is complete.');
-        CHECK.finalPrice().should('have.text', '$29.00');
+        checkOut.checkoutButton().click();
+        checkOut.checkoutButton().click();
+        checkOut.termsOfService().check().should('be.checked');
+        checkOut.checkoutButton().click();
+        checkOut.payWithBankWire().click();
+        checkOut.paymentName().should('include.text', 'Bank-wire payment.');
+        checkOut.checkoutButton().click();
+        checkOut.orderConfirmation().should('have.text', 'Your order on My Store is complete.');
+        checkOut.finalPrice().should('have.text', '$29.00');
         cy.signOut();
     });
 
