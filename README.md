@@ -171,6 +171,8 @@ This will automatically run all test and generate the report at the end of execu
 
 * The static data was created on `fixture` but the dynamic data was generated using [fakerjs](https://www.npmjs.com/package/faker), creating variables in a custom helper file.
 
+* All `validation data for assertions` such as `(URLs and confirmation messages )`, were saved in the helpers.js file located at cypress/support/utilities, cause was not able to validate againts data from a fixture's file data.
+
 * The CI pipeline is configured through a Circle CI orbs.
 
 * All The API successfull requests for positive scenarios were also validated using the [postman](https://www.postman.com/) tool and the collection will be included in the project just in case that is required to validate some information.

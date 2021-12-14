@@ -1,8 +1,10 @@
 import SignUpPage  from "../../support/pageObjets/signUpPage";
-import getUser  from "../../support/utilities/helpers";
+import { getUser }  from "../../support/utilities/helpers";
+import { allValidators }  from "../../support/utilities/helpers";
 
 const signUp = new SignUpPage();
 const  user = getUser();
+const validator = allValidators();
 
 
 describe('SignUp',function(){
@@ -16,7 +18,7 @@ describe('SignUp',function(){
                 signUp.logingButton().click();
                 signUp.setEmailInput().type(user.email);
                 signUp.submitEmailButton().click();
-                cy.url().should('eq', 'http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation');
+                cy.url().should('eq', validator.accountCreation);
 
                 //filling out the user information
                 signUp.setFirstName().type(user.name);
@@ -41,8 +43,8 @@ describe('SignUp',function(){
                 //the state field needs to be filled out last due to some issues with the website
                 signUp.setAddressState().select(user.state);                
                 signUp.addressSubmitButton().click();
-                cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
-                signUp.infoAccount().should('have.text', 'Welcome to your account. Here you can manage all of your personal information and orders.');      
+                cy.url().should('eq', validator.accountPage);
+                signUp.infoAccount().should('have.text', validator.welcomeText);      
 
         });
 });
