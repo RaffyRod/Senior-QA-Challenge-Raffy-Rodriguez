@@ -6,7 +6,7 @@ describe('Checkout Test case', function(){
 
     beforeEach(function(){
         cy.login();
-        cy.url().should('eq', 'http://automationpractice.com/index.php?controller=my-account');
+        cy.url().should('eq', Cypress.env('accountPageUrl'));
         cy.goToHome();  
         cy.fixture('items').then(function(data){ this.data = data});
 
@@ -16,7 +16,7 @@ describe('Checkout Test case', function(){
 
         //Adding Item to shopping Cart
         cy.addToShoppingCart(this.data.item);
-        checkOut.cartSuccessLabel().should('include.text', 'Product successfully added to your shopping cart');
+        checkOut.cartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
         checkOut.cartQuantity().should('have.text', this.data.quantity);
         checkOut.cartColor().should('include.text', this.data.color);
         checkOut.cartItemName().should('have.text', this.data.item);
@@ -31,8 +31,8 @@ describe('Checkout Test case', function(){
         checkOut.payWithBankWire().click();
         checkOut.paymentName().should('include.text', 'Bank-wire payment.');
         checkOut.checkoutButton().click();
-        checkOut.orderConfirmation().should('have.text', 'Your order on My Store is complete.');
-        checkOut.finalPrice().should('have.text', '$29.00');
+        checkOut.orderConfirmation().should('have.text', Cypress.env('orderCompleteMsg'));
+        checkOut.finalPrice().should('have.text', Cypress.env('finalPrice'));
         cy.signOut();
     });
 

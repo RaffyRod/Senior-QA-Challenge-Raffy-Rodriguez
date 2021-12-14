@@ -1,6 +1,6 @@
 const FAKER =  require('faker');
 
-export function getUser(){   
+function getUser(){   
     
     let user = {};
     user.email = FAKER.internet.email();
@@ -26,21 +26,12 @@ export function getUser(){
     user.addressAlias = "Delivery home address"; 
 
     return user;
+
+    
 }
 
-export function allValidators(){
+export default getUser;
 
-    let validData = {};
 
-    validData.accountPage = "http://automationpractice.com/index.php?controller=my-account";
-    validData.accountCreation = "http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation";
-    validData.welcomeText = "Welcome to your account. Here you can manage all of your personal information and orders.";
-    validData.addedWishConfirmation = "Added to your wishlist.";
-    validData.productAdded = "Product successfully added to your shopping cart";
-    validData.emptyCart = "Your shopping cart is empty.";
-
-    return validData;
-
-}
 
 

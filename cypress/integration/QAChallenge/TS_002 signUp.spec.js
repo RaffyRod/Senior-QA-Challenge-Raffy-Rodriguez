@@ -1,10 +1,9 @@
 import SignUpPage  from "../../support/pageObjets/signUpPage";
-import { getUser }  from "../../support/utilities/helpers";
-import { allValidators }  from "../../support/utilities/helpers";
+import  getUser   from "../../support/utilities/helpers";
+
 
 const signUp = new SignUpPage();
 const  user = getUser();
-const validator = allValidators();
 
 
 describe('SignUp',function(){
@@ -18,7 +17,7 @@ describe('SignUp',function(){
                 signUp.logingButton().click();
                 signUp.setEmailInput().type(user.email);
                 signUp.submitEmailButton().click();
-                cy.url().should('eq', validator.accountCreation);
+                cy.url().should('eq', Cypress.env('accountCreationUrl'));
 
                 //filling out the user information
                 signUp.setFirstName().type(user.name);
@@ -43,8 +42,8 @@ describe('SignUp',function(){
                 //the state field needs to be filled out last due to some issues with the website
                 signUp.setAddressState().select(user.state);                
                 signUp.addressSubmitButton().click();
-                cy.url().should('eq', validator.accountPage);
-                signUp.infoAccount().should('have.text', validator.welcomeText);      
+                cy.url().should('eq', Cypress.env('accountPageUrl'));
+                signUp.infoAccount().should('have.text', Cypress.env('welcomeText'));      
 
         });
 });

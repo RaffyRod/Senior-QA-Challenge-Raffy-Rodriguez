@@ -3,6 +3,16 @@
     "defaultCommandTimeout" : 90000,
     "viewportHeight": 768,
     "viewportWidth": 1024,
+    "env": {
+        "accountPageUrl" : "http://automationpractice.com/index.php?controller=my-account",
+        "accountCreationUrl": "http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation",
+        "welcomeText": "Welcome to your account. Here you can manage all of your personal information and orders.",
+        "addedWishConfirmationMsg":"Added to your wishlist.",
+        "productAddedMsg": "Product successfully added to your shopping cart",        
+        "emptyCartMsg": "Your shopping cart is empty.",
+        "orderCompleteMsg": "Your order on My Store is complete.",
+        "finalPrice":"$29.00"
+    },
     "reporter": "cypress-multi-reporters",
     "reporterOptions":{
         "reporterEnabled": "mochawesome",

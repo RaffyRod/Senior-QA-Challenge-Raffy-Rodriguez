@@ -1,13 +1,11 @@
 import MainPage from "../../support/pageObjets/mainPage";
 import CheckOutPage from "../../support/pageObjets/checkOutPage";
-import { getUser }   from "../../support/utilities/helpers";
-import { allValidators }  from "../../support/utilities/helpers";
+import  getUser    from "../../support/utilities/helpers";
 
 
 const mainPage = new MainPage();
 const check = new CheckOutPage();
 const user = getUser();
-const validator = allValidators();
 
 
 describe('Main Page test cases', function(){
@@ -15,7 +13,7 @@ describe('Main Page test cases', function(){
     beforeEach(function(){
         
         cy.login();
-        cy.url().should('eq', validator.accountPage);
+        cy.url().should('eq', Cypress.env('accountPageUrl'));
         cy.goToHome();  
         cy.fixture('items').then(function(data){ this.data = data});      
 
@@ -42,7 +40,7 @@ describe('Main Page test cases', function(){
         mainPage.wishItem().trigger('mouseover');
         mainPage.wishItemMore().click();
         mainPage.wishListButton().click(); 
-        mainPage.wishAddedMsg().should('have.text', validator.addedWishConfirmation);
+        mainPage.wishAddedMsg().should('have.text', Cypress.env('addedWishConfirmationMsg'));
         mainPage.wishAddedMsgClose().click();            
     });
 
@@ -55,7 +53,7 @@ describe('Main Page test cases', function(){
 
     it('Add to shopping Cart', function(){
         cy.addToShoppingCart(this.data.item);
-        check.cartSuccessLabel().should('include.text', validator.productAdded);
+        check.cartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
         check.cartQuantity().should('have.text', this.data.quantity);
         check.cartColor().should('include.text', this.data.color);
         check.cartItemName().should('have.text', this.data.item);
@@ -64,9 +62,9 @@ describe('Main Page test cases', function(){
 
     it('Remove from shopping cart', function(){
         cy.addToShoppingCart(this.data.item);
-        check.cartSuccessLabel().should('include.text', validator.productAdded);
+        check.cartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
         check.goToCheckOut().click();
         check.deleteFromCheckOut().click();
-        check.checkOutAlert().should('have.text', validator.emptyCart)
+        check.checkOutAlert().should('have.text', Cypress.env('emptyCartMsg'));
     });   
 });
