@@ -13,7 +13,7 @@ describe('Login and Logout', function(){
 
     it('logOut', function(){
         cy.signOut();
-        signIn.getAuthObjec().should('be.visible');
+        signIn.getAuthObject().should('be.visible');
     });
     
 });
