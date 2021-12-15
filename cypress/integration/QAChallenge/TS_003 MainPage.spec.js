@@ -62,8 +62,8 @@ describe('Main Page test cases', function(){
 
     it('Remove from shopping cart', function(){
         cy.addToShoppingCart(this.data.item);
-        check.cartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
-        check.goToCheckOut().click();
+        check.getCartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
+        check.getCheckOutButton().click();
         check.deleteFromCheckOut().click();
         check.checkOutAlert().should('have.text', Cypress.env('emptyCartMsg'));
     });   
