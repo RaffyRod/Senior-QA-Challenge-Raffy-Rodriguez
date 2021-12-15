@@ -34,7 +34,7 @@ describe('Main Page test cases', function(){
         
     });
 
-    it('Adding an item to the wish list', function(){
+    it.only('Adding an item to the wish list', function(){
         mainPage.setSearchBar().type(this.data.item);
         mainPage.clickSearchButton().click();   
         mainPage.setWishItem().trigger('mouseover');
