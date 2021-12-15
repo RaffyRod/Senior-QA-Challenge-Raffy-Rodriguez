@@ -51,7 +51,7 @@ describe('Main Page test cases', function(){
         mainPage.getNewsAlert().should('be.visible');         
     });
 
-    it.only('Add to shopping Cart', function(){
+    it('Add to shopping Cart', function(){
         cy.addToShoppingCart(this.data.item);
         check.getCartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
         check.getProductQuantity().should('have.text', this.data.quantity);
