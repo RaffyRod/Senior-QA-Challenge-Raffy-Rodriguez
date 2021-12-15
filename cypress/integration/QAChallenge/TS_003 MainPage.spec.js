@@ -20,13 +20,13 @@ describe('Main Page test cases', function(){
     });
     
 
-    it('Best Seller section', function(){
+    it('Going to Best Seller section', function(){
        mainPage.getBestSellers().click();
        mainPage.setActiveBestSeller().should('be.visible');     
 
     });
 
-    it('Search for an item using the search bar', function(){
+    it('Searching for an item using the search bar', function(){
       
      mainPage.setSearchBar().type(this.data.item);
      mainPage.clickSearchButton().click();   
@@ -34,7 +34,7 @@ describe('Main Page test cases', function(){
         
     });
 
-    it('Adding to the wish list', function(){
+    it('Adding an item to the wish list', function(){
         mainPage.setSearchBar().type(this.data.item);
         mainPage.clickSearchButton().click();   
         mainPage.setWishItem().trigger('mouseover');
@@ -44,14 +44,14 @@ describe('Main Page test cases', function(){
         mainPage.getWishAddedMsgClose().click();            
     });
 
-    it('Subscribe to NewsLetter', function(){
+    it('Subscribing to the NewsLetter', function(){
         mainPage.getNewsBar().click();
         mainPage.getNewsBar().type(user.newsEmail);        
         mainPage.clickNewsButton().click();
         mainPage.getNewsAlert().should('be.visible');         
     });
 
-    it('Add to shopping Cart', function(){
+    it('Adding an item to the shopping Cart', function(){
         cy.addToShoppingCart(this.data.item);
         check.getCartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
         check.getProductQuantity().should('have.text', this.data.quantity);
@@ -60,7 +60,7 @@ describe('Main Page test cases', function(){
         check.getOrderTotal().should('have.text', this.data.price);
     });
 
-    it('Remove from shopping cart', function(){
+    it('Remove an item from shopping cart', function(){
         cy.addToShoppingCart(this.data.item);
         check.getCartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
         check.getCheckOutButton().click();

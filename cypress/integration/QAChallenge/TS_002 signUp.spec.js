@@ -6,13 +6,13 @@ const signUp = new SignUpPage();
 const  user = getUser();
 
 
-describe('SignUp',function(){
+describe('Signing Up as customer',function(){
 
         beforeEach(function(){
             cy.visit('/');
         });
 
-        it('SignUp', function(){
+        it('Creating new account', function(){
                 
                 signUp.clicklogingButton().click();
                 signUp.setEmailInput().type(user.email);

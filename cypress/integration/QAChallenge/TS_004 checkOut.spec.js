@@ -12,7 +12,7 @@ describe('Checkout Test case', function(){
 
     });
 
-    it('Checkout Item', function(){
+    it('Checking out', function(){
 
         //Adding Item to shopping Cart
         cy.addToShoppingCart(this.data.item);
