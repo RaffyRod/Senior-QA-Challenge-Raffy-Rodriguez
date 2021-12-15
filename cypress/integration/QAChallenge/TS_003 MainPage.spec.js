@@ -20,7 +20,7 @@ describe('Main Page test cases', function(){
     });
     
 
-    it('Going to Best Seller section', function(){
+    it('Moving to Best Seller section', function(){
        mainPage.getBestSellers().click();
        mainPage.setActiveBestSeller().should('be.visible');     
 
