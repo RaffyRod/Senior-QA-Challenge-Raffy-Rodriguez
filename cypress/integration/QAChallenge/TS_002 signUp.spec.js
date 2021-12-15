@@ -14,7 +14,7 @@ describe('SignUp',function(){
 
         it('SignUp', function(){
                 
-                signUp.logingButton().click();
+                signUp.clicklogingButton().click();
                 signUp.setEmailInput().type(user.email);
                 signUp.submitEmailButton().click();
                 cy.url().should('eq', Cypress.env('accountCreationUrl'));
@@ -26,8 +26,8 @@ describe('SignUp',function(){
                 signUp.setDayOfBirth().select(user.dayOfBirth);
                 signUp.setMonthOfBirth().select(user.monthOfBirth);
                 signUp.setYearOfBirth().select(user.yearOfBirth);
-                signUp.signForNewsLetter().check();
-                signUp.receiveSpecialOffers().check();
+                signUp.getSignForNewsLetter().check();
+                signUp.setReceiveSpecialOffers().check();
                 signUp.setCompanyName().type(user.company);
                 signUp.setAddressFirstLine().type(user.address);
                 signUp.setAddressSecondLine().type(user.secondaryAddress);
@@ -41,9 +41,9 @@ describe('SignUp',function(){
 
                 //the state field needs to be filled out last due to some issues with the website
                 signUp.setAddressState().select(user.state);                
-                signUp.addressSubmitButton().click();
+                signUp.getAddressSubmitButton().click();
                 cy.url().should('eq', Cypress.env('accountPageUrl'));
-                signUp.infoAccount().should('have.text', Cypress.env('welcomeText'));      
+                signUp.setInfoAccount().should('have.text', Cypress.env('welcomeText'));      
 
         });
 });

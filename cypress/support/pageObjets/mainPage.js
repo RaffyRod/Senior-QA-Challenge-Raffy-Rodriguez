@@ -13,56 +13,56 @@ class MainPage{
             return cy.get('li > .btn > span');
         }
 
-        searchBar(){
+        setSearchBar(){
             return cy.get('#search_query_top');
         }
 
-        searchButton(){
+        clickSearchButton(){
             return cy.get('#searchbox > .btn');
         }
 
        
-        bestSellers(){
+        getBestSellers(){
             return cy.get('#home-page-tabs > :nth-child(2) > .blockbestsellers');
         }
 
-        activeBestSeller(){
+        setActiveBestSeller(){
             return cy.get('li.active > a.blockbestsellers');
         }
 
-        itemTitle(item){
+        getItemTitle(item){
             return cy.get('div[class="product-container"] h5 a[title= "'+ item +'"]')
         }
         
-        wishItem(){
+        setWishItem(){
                 return cy.get('.product_img_link > .replace-2x');
         }
 
-        wishItemMore(){
+        showWishItemMore(){
             return cy.get('.lnk_view > span');
         }
 
-        wishListButton(){
+        clickWishListButton(){
             return cy.get('#wishlist_button');
         }
 
-        wishAddedMsg(){
+        getWishAddedMsg(){
             return cy.get('.fancybox-error');
         }
 
-        wishAddedMsgClose(){
+        getWishAddedMsgClose(){
             return cy.get('.fancybox-item');
         }
 
-        newsBar(){
+        getNewsBar(){
             return cy.get('#newsletter-input');
         }
 
-        newsButton(){
+        clickNewsButton(){
             return cy.get('.form-group > .btn');
         }
 
-        newsAlert(){
+        getNewsAlert(){
             return cy.get('.alert');
         }     
 

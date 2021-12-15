@@ -4,28 +4,28 @@ class CheckOutPage{
         return cy.get('.ajax_add_to_cart_button > span');
     }
 
-    cartSuccessLabel(){
+    getCartSuccessLabel(){
         return cy.get('.layer_cart_product > h2');
     }
 
-    cartItemName(){
+    getCartItemName(){
         return cy.get('#layer_cart_product_title');
     }
 
-    cartQuantity(){
+    getProductQuantity(){
         return cy.get('#layer_cart_product_quantity');
     }
 
-    cartColor(){
+    getProductColor(){
         return cy.get('#layer_cart_product_attributes');
     }
 
-    cartTotal(){
+    getOrderTotal(){
         return cy.get('#layer_cart_product_price');
     }
 
 
-    goToCheckOut(){
+    getCheckOutButton(){
         return cy.get('.button-container > .button-medium > span');
     }
 
@@ -39,29 +39,29 @@ class CheckOutPage{
 
     //checkout buying process
 
-    checkoutButton(){
+    getProceedButton(){
         return cy.get('.cart_navigation > .button > span');
     }
 
    
-    termsOfService(){
+    getToSCheck(){
         return cy.get('#cgv');
     }
 
-    payWithBankWire(){
+    getPaymentMethod(){
         return cy.get('.bankwire');
     }
 
-    paymentName(){
+    getPaymentName(){
         return cy.get('.page-subheading');
     }
 
    
-    orderConfirmation(){
+    getOrderConfirmation(){
         return cy.get('.cheque-indent > .dark');
     }
 
-    finalPrice(){
+    getFinalPrice(){
         return cy.get('.price > strong');
     }
 

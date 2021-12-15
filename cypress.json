@@ -11,7 +11,11 @@
         "productAddedMsg": "Product successfully added to your shopping cart",        
         "emptyCartMsg": "Your shopping cart is empty.",
         "orderCompleteMsg": "Your order on My Store is complete.",
-        "finalPrice":"$29.00"
+        "finalPrice":"$29.00",
+        "paymentType": "Bank-wire payment.",
+        "moreThanHundred": "You may not request more than 100 items.",
+        "missingHash": "You must provide a hash.",
+        "missingTimestamp": "You must provide a timestamp."
     },
     "reporter": "cypress-multi-reporters",
     "reporterOptions":{

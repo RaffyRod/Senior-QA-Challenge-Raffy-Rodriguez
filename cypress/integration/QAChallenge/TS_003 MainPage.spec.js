@@ -21,43 +21,43 @@ describe('Main Page test cases', function(){
     
 
     it('Best Seller section', function(){
-       mainPage.bestSellers().click();
-       mainPage.activeBestSeller().should('be.visible');     
+       mainPage.getBestSellers().click();
+       mainPage.setActiveBestSeller().should('be.visible');     
 
     });
 
     it('Search for an item using the search bar', function(){
       
-     mainPage.searchBar().type(this.data.item);
-     mainPage.searchButton().click();   
-     mainPage.itemTitle(this.data.item).should('be.visible');         
+     mainPage.setSearchBar().type(this.data.item);
+     mainPage.clickSearchButton().click();   
+     mainPage.getItemTitle(this.data.item).should('be.visible');         
         
     });
 
     it('Adding to the wish list', function(){
-        mainPage.searchBar().type(this.data.item);
-        mainPage.searchButton().click();   
-        mainPage.wishItem().trigger('mouseover');
-        mainPage.wishItemMore().click();
-        mainPage.wishListButton().click(); 
-        mainPage.wishAddedMsg().should('have.text', Cypress.env('addedWishConfirmationMsg'));
-        mainPage.wishAddedMsgClose().click();            
+        mainPage.setSearchBar().type(this.data.item);
+        mainPage.clickSearchButton().click();   
+        mainPage.setWishItem().trigger('mouseover');
+        mainPage.showWishItemMore().click();
+        mainPage.clickWishListButton().click(); 
+        mainPage.getWishAddedMsg().should('have.text', Cypress.env('addedWishConfirmationMsg'));
+        mainPage.getWishAddedMsgClose().click();            
     });
 
     it('Subscribe to NewsLetter', function(){
-        mainPage.newsBar().click();
-        mainPage.newsBar().type(user.newsEmail);        
-        mainPage.newsButton().click();
-        mainPage.newsAlert().should('be.visible');         
+        mainPage.getNewsBar().click();
+        mainPage.getNewsBar().type(user.newsEmail);        
+        mainPage.clickNewsButton().click();
+        mainPage.getNewsAlert().should('be.visible');         
     });
 
-    it('Add to shopping Cart', function(){
+    it.only('Add to shopping Cart', function(){
         cy.addToShoppingCart(this.data.item);
-        check.cartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
-        check.cartQuantity().should('have.text', this.data.quantity);
-        check.cartColor().should('include.text', this.data.color);
-        check.cartItemName().should('have.text', this.data.item);
-        check.cartTotal().should('have.text', this.data.price);
+        check.getCartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
+        check.getProductQuantity().should('have.text', this.data.quantity);
+        check.getProductColor().should('include.text', this.data.color);
+        check.getCartItemName().should('have.text', this.data.item);
+        check.getOrderTotal().should('have.text', this.data.price);
     });
 
     it('Remove from shopping cart', function(){

@@ -33,7 +33,7 @@ Cypress.Commands.add('goToHome', function(){
 });
 
 Cypress.Commands.add('addToShoppingCart', function(item){
-   mainPage.searchBar().type(item);
-   mainPage.searchButton().click();  
+   mainPage.setSearchBar().type(item);
+   mainPage.clickSearchButton().click();  
    checkOut.addToCartSectionButton().click();
 });

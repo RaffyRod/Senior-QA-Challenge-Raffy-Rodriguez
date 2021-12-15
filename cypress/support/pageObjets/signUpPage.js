@@ -1,6 +1,6 @@
 class SignUpPage{
 
-    logingButton(){
+    clicklogingButton(){
         return cy.get('.login');
     }
 
@@ -44,11 +44,11 @@ class SignUpPage{
         return cy.get('#years');
     }
 
-    signForNewsLetter(){
+    getSignForNewsLetter(){
         return cy.get('#newsletter');
     }
 
-    receiveSpecialOffers(){
+    setReceiveSpecialOffers(){
         return cy.get('#optin');
     }
 
@@ -106,11 +106,11 @@ class SignUpPage{
         return cy.get('#alias');
     }
 
-    addressSubmitButton(){
+    getAddressSubmitButton(){
         return cy.get('#submitAccount > span');
     }
 
-    infoAccount(){
+    setInfoAccount(){
         return cy.get('.info-account');
     }
 }

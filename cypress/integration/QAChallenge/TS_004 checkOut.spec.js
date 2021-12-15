@@ -16,23 +16,23 @@ describe('Checkout Test case', function(){
 
         //Adding Item to shopping Cart
         cy.addToShoppingCart(this.data.item);
-        checkOut.cartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
-        checkOut.cartQuantity().should('have.text', this.data.quantity);
-        checkOut.cartColor().should('include.text', this.data.color);
-        checkOut.cartItemName().should('have.text', this.data.item);
-        checkOut.cartTotal().should('have.text', this.data.price);
-        checkOut.goToCheckOut().click();
+        checkOut.getCartSuccessLabel().should('include.text', Cypress.env('productAddedMsg'));
+        checkOut.getProductQuantity().should('have.text', this.data.quantity);
+        checkOut.getProductColor().should('include.text', this.data.color);
+        checkOut.getCartItemName().should('have.text', this.data.item);
+        checkOut.getOrderTotal().should('have.text', this.data.price);
+        checkOut.getCheckOutButton().click();
 
         //checkOut Process
-        checkOut.checkoutButton().click();
-        checkOut.checkoutButton().click();
-        checkOut.termsOfService().check().should('be.checked');
-        checkOut.checkoutButton().click();
-        checkOut.payWithBankWire().click();
-        checkOut.paymentName().should('include.text', 'Bank-wire payment.');
-        checkOut.checkoutButton().click();
-        checkOut.orderConfirmation().should('have.text', Cypress.env('orderCompleteMsg'));
-        checkOut.finalPrice().should('have.text', Cypress.env('finalPrice'));
+        checkOut.getProceedButton().click();
+        checkOut.getProceedButton().click();
+        checkOut.getToSCheck().check().should('be.checked');
+        checkOut.getProceedButton().click();
+        checkOut.getPaymentMethod().click();
+        checkOut.getPaymentName().should('include.text', Cypress.env('paymentType'));
+        checkOut.getProceedButton().click();
+        checkOut.getOrderConfirmation().should('have.text', Cypress.env('orderCompleteMsg'));
+        checkOut.getFinalPrice().should('have.text', Cypress.env('finalPrice'));
         cy.signOut();
     });
 

@@ -37,7 +37,7 @@ describe('Marvel X-man Comic Character Test', function(){
        
         }).then((response) => {            
             expect(response.body).to.have.property('code', 'MissingParameter');
-            expect(response.body).to.have.property('message', 'You must provide a hash.');
+            expect(response.body).to.have.property('message', Cypress.env('missingHash'));
     });
 });
 
@@ -49,7 +49,7 @@ describe('Marvel X-man Comic Character Test', function(){
             failOnStatusCode: false 
         }).then((response) => {
             expect(response.body).to.have.property('code', 409);
-            expect(response.body).to.have.property('status', 'You may not request more than 100 items.');
+            expect(response.body).to.have.property('status', Cypress.env('moreThanHundred'));
         });
     });
 });
