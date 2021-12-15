@@ -14,7 +14,7 @@
         "finalPrice":"$29.00",
         "paymentType": "Bank-wire payment.",
         "moreThanHundred": "You may not request more than 100 items.",
-        "missingHash": "You must provide a hash.",
+        "missingHashmsg": " You must provide a hash.",
         "missingTimestamp": "You must provide a timestamp."
     },
     "reporter": "cypress-multi-reporters",

@@ -47,7 +47,7 @@ describe('Marvel Character test cases', function(){
             failOnStatusCode: false
         }).then((response) => {
             expect(response.body).to.have.property('code', 'MissingParameter');
-            expect(response.body).to.have.property('message', Cypress.env('misingHash'));
+            expect(response.body).to.have.property('message', 'You must provide a hash.');
         });
 
     });

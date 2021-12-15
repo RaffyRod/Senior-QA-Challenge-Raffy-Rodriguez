@@ -37,7 +37,7 @@ describe('Marvel X-man Comic Character Test', function(){
        
         }).then((response) => {            
             expect(response.body).to.have.property('code', 'MissingParameter');
-            expect(response.body).to.have.property('message', Cypress.env('missingHash'));
+            expect(response.body).to.have.property('message', 'You must provide a hash.');
     });
 });
 
