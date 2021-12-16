@@ -4,12 +4,12 @@ const signIn = new SignInPage();
 
 describe('Login and Logout', function(){
 
-       it('Login process', function(){         
+       it('Login success', function(){         
         cy.login();
         cy.url().should('eq', Cypress.env('accountPageUrl'));       
     });
 
-    it('Logout process', function(){
+    it('Logout success', function(){
         cy.signOut();
         signIn.getAuthObject().should('be.visible');
     });
