@@ -6,8 +6,8 @@ function getApi(){
     const date = new Date();
 
     apiData.timestamp = date.getTime();
-    apiData.publicKey = "5b76b5e9de1795f9b7fbd5dbe201ce51";
-    apiData.privateKey = "5d121fd4cfbfd781f35fc0f0ba80f71a21e1d563";
+    apiData.publicKey = "<your public marverl apiKey here>";
+    apiData.privateKey = "<your private marvel apiKey here>";
     apiData.hash = md5(apiData.timestamp + apiData.privateKey + apiData.publicKey);
     apiData.url = "https://gateway.marvel.com:443";
     apiData.limit = 100;    
