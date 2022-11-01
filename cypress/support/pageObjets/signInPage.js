@@ -1,24 +1,24 @@
 class SignInPage{
-    
-    getSignInButton(){
-        return cy.get('.login');
-    }
 
-    getEmailInput(){
-        return cy.get('#email');
-    }
+  getSignInButton(){
+    return cy.get('.login');
+  }
 
-    getPasswordInput(){
-        return cy.get('#passwd');
-    }
+  getEmailInput(){
+    return cy.get('#email');
+  }
 
-    submitButton(){
-        return cy.get('#SubmitLogin > span');
-    }
+  getPasswordInput(){
+    return cy.get('#passwd');
+  }
 
-    getAuthObject(){
-        return cy.get('.navigation_page');
-    }
+  submitButton(){
+    return cy.get('#SubmitLogin > span');
+  }
+
+  getAuthObject(){
+    return cy.get('.navigation_page');
+  }
 
 }
 

@@ -1,69 +1,66 @@
 class CheckOutPage{
-    
-    addToCartSectionButton(){
-        return cy.get('.ajax_add_to_cart_button > span');
-    }
 
-    getCartSuccessLabel(){
-        return cy.get('.layer_cart_product > h2');
-    }
+  addToCartSectionButton(){
+    return cy.get('.ajax_add_to_cart_button > span');
+  }
 
-    getCartItemName(){
-        return cy.get('#layer_cart_product_title');
-    }
+  getCartSuccessLabel(){
+    return cy.get('.layer_cart_product > h2');
+  }
 
-    getProductQuantity(){
-        return cy.get('#layer_cart_product_quantity');
-    }
+  getCartItemName(){
+    return cy.get('#layer_cart_product_title');
+  }
 
-    getProductColor(){
-        return cy.get('#layer_cart_product_attributes');
-    }
+  getProductQuantity(){
+    return cy.get('#layer_cart_product_quantity');
+  }
 
-    getOrderTotal(){
-        return cy.get('#layer_cart_product_price');
-    }
+  getProductColor(){
+    return cy.get('#layer_cart_product_attributes');
+  }
 
+  getOrderTotal(){
+    return cy.get('#layer_cart_product_price');
+  }
 
-    getCheckOutButton(){
-        return cy.get('.button-container > .button-medium > span');
-    }
+  getCheckOutButton(){
+    return cy.get('.button-container > .button-medium > span');
+  }
 
-    deleteFromCheckOut(){
-        return cy.get('.icon-trash');
-    }
+  deleteFromCheckOut(){
+    return cy.get('.icon-trash');
+  }
 
-    checkOutAlert(){
-        return cy.get('.alert');
-    }
+  checkOutAlert(){
+    return cy.get('.alert');
+  }
 
-    //checkout buying process
+  //checkout buying process
 
-    getProceedButton(){
-        return cy.get('.cart_navigation > .button > span');
-    }
+  getProceedButton(){
+    return cy.get('.cart_navigation > .button > span');
+  }
 
-   
-    getToSCheck(){
-        return cy.get('#cgv');
-    }
+  getToSCheck(){
+    return cy.get('#cgv');
+  }
 
-    getPaymentMethod(){
-        return cy.get('.bankwire');
-    }
+  getPaymentMethod(){
+    return cy.get('.bankwire');
+  }
 
-    getPaymentName(){
-        return cy.get('.page-subheading');
-    }
+  getPaymentName(){
+    return cy.get('.page-subheading');
+  }
 
-   
-    getOrderConfirmation(){
-        return cy.get('.cheque-indent > .dark');
-    }
+  getOrderConfirmation(){
+    return cy.get('.cheque-indent > .dark');
+  }
 
-    getFinalPrice(){
-        return cy.get('.price > strong');
-    }
+  getFinalPrice(){
+    return cy.get('.price > strong');
+  }
 
 }
 export default CheckOutPage;
