@@ -59,6 +59,8 @@ For the API testing it was required to be automated 3 request to the Marvel Comi
 * [Fakerjs.](http://marak.github.io/faker.js/)
 * [CircleCi.](https://circleci.com/developer/orbs/orb/cypress-io/cypress#quick-start)
 * [Mochawesome.](https://www.npmjs.com/package/mochawesome)
+* [Eslint.](https://eslint.org/docs/latest/user-guide/getting-started)
+
 
 
 
@@ -160,6 +162,7 @@ This will automatically run all test and generate the report at the end of execu
 
 * The website [automationpractice.com](http://automationpractice.com/index.php) has load issues and this make some of the test fail sometimes.
 * For API negative test cases was used `failOnStatusCode: false` , so it can continue and do the assertions.
+* It was implemented the Eslint linter to ensured the code ebst practices and performance.
 
 
 
