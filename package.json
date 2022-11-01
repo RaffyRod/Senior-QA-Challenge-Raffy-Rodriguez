@@ -10,7 +10,9 @@
     "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/finalReports/finalReport.json",
     "generate-report": "marge cypress/reports/finalReports/finalReport.json -f finalReport -o cypress/reports/finalReports",
     "posttest": "npm run combine-reports && npm run generate-report",
-    "test": "npm run scripts || npm run posttest"
+    "test": "npm run scripts || npm run posttest",
+    "lint": "eslint ./",
+    "lint-fix": "npm run lint -- --fix"
   },
   "keywords": [
     "testing",
@@ -22,15 +24,14 @@
   "devDependencies": {
     "cypress": "^9.1.1",
     "cypress-multi-reporters": "^1.5.0",
+    "eslint": "^8.26.0",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.0.1"
-
   },
   "dependencies": {
     "faker": "^5.5.3",
     "md5": "^2.3.0",
     "mocha": "^5.2.0",
     "mochawesome": "^7.0.1"
-    
   }
 }
