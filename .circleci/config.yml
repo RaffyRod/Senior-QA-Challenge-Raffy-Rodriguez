@@ -8,11 +8,14 @@ jobs:
     steps:
       - checkout
       
-      
       - run:
           name: Install Dependencies
           command: npm ci
           when: always
+
+      - run:
+          name: Run Linter
+          command: npm run lint
      
       - run:
           name: Run cypress tests process
