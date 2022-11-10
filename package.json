@@ -11,7 +11,7 @@
     "generate-report": "marge cypress/reports/finalReports/finalReport.json -f finalReport -o cypress/reports/finalReports",
     "posttest": "npm run combine-reports && npm run generate-report",
     "test": "npm run scripts || npm run posttest",
-    "lint": "eslint ./",
+    "lint": "eslint cypress/integration",
     "lint-fix": "npm run lint -- --fix"
   },
   "keywords": [

@@ -1,4 +1,12 @@
 {
+    "globals": {
+        "cy": true,
+        "Cypress": true,
+        "it": true,
+        "expect": true,
+        "describe": true,
+        "beforeEach": true
+      },
     "env": {
         "browser": true,
         "es2021": true
