@@ -4,15 +4,12 @@
   "description": "this is Raffy Rodriguez's  Senior QA challenge for GBH",
   "main": "index.js",
   "scripts": {
-    "clean:reports": "rm -rf cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\finalReports",
-    "pretest": "npm run clean:reports",
-    "scripts": "cypress run",
-    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/finalReports/finalReport.json",
-    "generate-report": "marge cypress/reports/finalReports/finalReport.json -f finalReport -o cypress/reports/finalReports",
-    "posttest": "npm run combine-reports && npm run generate-report",
-    "test": "npm run scripts || npm run posttest",
-    "lint": "eslint cypress/integration",
-    "lint-fix": "npm run lint -- --fix"
+    "pretest-windows": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports",
+    "pretest": "rm -rf cypress/reports && mkdir cypress/reports",
+    "lint": "eslint cypress/e2e",
+    "lint-fix": "npm run lint -- --fix",
+    "test": "npm run pretest && npx cypress run",
+    "test-windows": "npm run pretest-windows && npx cypress run --browser chrome"
   },
   "keywords": [
     "testing",
@@ -22,16 +19,13 @@
   "author": "Raffy Rodriguez.",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.1.1",
-    "cypress-multi-reporters": "^1.5.0",
-    "eslint": "^8.26.0",
-    "mochawesome-merge": "^4.2.1",
-    "mochawesome-report-generator": "^6.0.1"
+    "cypress": "^12.3.0",
+    "eslint": "^8.26.0"
   },
   "dependencies": {
+    "cypress-mochawesome-reporter": "^3.2.3",
     "faker": "^5.5.3",
     "md5": "^2.3.0",
-    "mocha": "^5.2.0",
-    "mochawesome": "^7.0.1"
+    "mocha": "^5.2.0"
   }
 }
