@@ -5,3 +5,5 @@
 **/logs
 **/logs/debug.log
 *.log
+*.html
+/reports

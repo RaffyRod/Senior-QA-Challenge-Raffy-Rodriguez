@@ -6,7 +6,7 @@ This is an automation framework developed for UI and API testing.
 
 ### UI testing
 
-The framework contains the following 10 test cases for the website [automationpractice.com/](http://automationpractice.com/index.php) 
+The framework contains the following 10 test cases for the website [automationpractice.com/](http://automationpractice.com/index.php)
 
 1. Sign up.
 
@@ -29,7 +29,6 @@ The framework contains the following 10 test cases for the website [automationpr
 10. Log out.
 
 
-        
 
 
 The test cases are documented in the test management platform [qatouch.com](https://www.qatouch.com/). To access the test suite, can reach me at:
@@ -37,7 +36,7 @@ raffy.a.rodriguez@gmail.com
 
 
 
-### API testing 
+### API testing
 
 For the API testing it was required to be automated 3 request to the Marvel Comics API [Marvel Developer Site](https://developer.marvel.com).
 
@@ -69,7 +68,9 @@ For the API testing it was required to be automated 3 request to the Marvel Comi
 
 * Node.js must be installed in order to run the project.
 
-* `(For locally purposes)` If you are using `window's powershell or CMD` as terminal, go to the  `package.json`, in scripts section go to the command `clean:reports` and replace `rm -rf` with `rmdir /S /Q` in order to generate reports.
+* `(For locally purposes)` If you are using `window's powershell or CMD` as terminal, run the command `npm run test-windows` or
+if you are a MacOs or linux user just run from the terminal `npm run test`.
+
 
 * Go to [Marvel's developer website](https://developer.marvel.com) and create an account to get a public and a private API key `(this is required for API testing)`.
 
