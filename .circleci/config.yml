@@ -4,10 +4,10 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest-browsers
-    
+
     steps:
       - checkout
-      
+
       - run:
           name: Install Dependencies
           command: npm ci
@@ -16,11 +16,11 @@ jobs:
       - run:
           name: Run Linter
           command: npm run lint
-     
+
       - run:
           name: Run cypress tests process
-          command: npm run test      
-     
+          command: npm run test
+
       - store_artifacts:
           name: Uploading cypress/videos artifacts
           path: cypress/videos
